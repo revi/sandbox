@@ -10,7 +10,8 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out = array();
 
     $out[] = '# Forked from phabricator.wikimedia.org, we.phorge.it';
-    $out[] = '# version: 20240416T211100+0900';
+    // Version timestamp is when I started editing them.
+    $out[] = '# version: 20240417T011800+0900';
     $out[] = '# also at https://github.com/revi/sandbox.git';
     $out[] = 'User-Agent: *';
     $out[] = 'Disallow: /diffusion/';
@@ -33,8 +34,19 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /dashboard';
     $out[] = 'Disallow: /calendar';
     $out[] = 'Disallow: /herald';
+    // This is commits.
     $out[] = 'Disallow: /r*';
+    // This is pastes (P$)
     $out[] = 'Disallow: /P*%24*';
+    $out[] = 'Disallow: /phame';
+    // This is blog entries (J$)
+    $out[] = 'Disallow: J*%24*';
+    // This is user list.
+    // As of 2024-04-17 user list is behind auth but who knows it might change?
+    $out[] = '/people';
+    // This is user profile link.
+    $out[] = 'Disallow: /p/';
+    // Phorge specific entries end here.
     $out[] = '# This is cloudflare endpoint';
     $out[] = '# Ref: https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/';
     $out[] = 'Disallow: /cdn-cgi/';
@@ -55,6 +67,8 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = '# Ref: https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers?hl=en#google-extended';
     $out[] = 'User-agent: Google-Extended';
     $out[] = 'Disallow: /';
+    // Crawl-delay entries at the bottom
+    // Ref: https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
     $out[] = 'User-agent: *';
     $out[] = 'Crawl-delay: 1';
 
