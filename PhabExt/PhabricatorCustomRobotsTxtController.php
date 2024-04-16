@@ -9,9 +9,9 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
   public function processRequest() {
     $out = array();
 
-    $out[] = '# Forked from phabricator.wikimedia, we.phorge.it';
-    $out[] = '# version: 20240416T203000+0900';
-    $out[] = '# also at https://bugs.revi.xyz/P49';
+    $out[] = '# Forked from phabricator.wikimedia.org, we.phorge.it';
+    $out[] = '# version: 20240416T211100+0900';
+    $out[] = '# also at https://github.com/revi/sandbox.git';
     $out[] = 'User-Agent: *';
     $out[] = 'Disallow: /diffusion/';
     $out[] = 'Disallow: /source/';
@@ -36,7 +36,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /r*';
     $out[] = 'Disallow: /P*%24*';
     $out[] = '# This is cloudflare endpoint';
-    $out[] = 'https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/';
+    $out[] = '# Ref: https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/';
     $out[] = 'Disallow: /cdn-cgi/';
     $out[] = '# Google Ads are not welcome';
     $out[] = 'User-agent: Mediapartners-Google';
