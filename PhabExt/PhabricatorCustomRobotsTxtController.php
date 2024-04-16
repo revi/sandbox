@@ -42,7 +42,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /J*%24*';
     // This is user list.
     // As of 2024-04-17 user list is behind auth but who knows it might change?
-    $out[] = '/people';
+    $out[] = 'Disallow: /people';
     // This is user profile link.
     $out[] = 'Disallow: /p/';
     // Phorge specific entries end here.
