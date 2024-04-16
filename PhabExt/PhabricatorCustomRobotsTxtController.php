@@ -18,7 +18,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /source/';
     $out[] = 'Disallow: /multimeter/';
     $out[] = 'Disallow: /file/';
-    $out[] = 'Disallow: /project/ sprint';
     $out[] = 'Disallow: /policy/explain';
     $out[] = 'Disallow: /auth';
     $out[] = 'Disallow: /login';
@@ -40,7 +39,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /P*%24*';
     $out[] = 'Disallow: /phame';
     // This is blog entries (J$)
-    $out[] = 'Disallow: J*%24*';
+    $out[] = 'Disallow: /J*%24*';
     // This is user list.
     // As of 2024-04-17 user list is behind auth but who knows it might change?
     $out[] = '/people';
