@@ -1,0 +1,16 @@
+name: "PHP Syntax Check"
+on:
+  push:
+    paths:
+      - '**.php'
+  pull_request:
+    paths:
+      - '**.php'
+  workflow_dispatch:
+
+jobs:
+  phpsyntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PHP Basic Syntax Check
+        run: php -l PhabExt/PhabricatorCustomRobotsTxtController.php
