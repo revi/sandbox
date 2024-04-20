@@ -11,7 +11,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 
     $out[] = '# Forked from phabricator.wikimedia.org, we.phorge.it';
     // Version timestamp is when I started editing them.
-    $out[] = '# version: 20240417T011800+0900';
+    $out[] = '# version: 20240421T042000+0900';
     $out[] = '# also at https://github.com/revi/sandbox.git';
     $out[] = 'User-Agent: *';
     $out[] = 'Disallow: /diffusion/';
@@ -56,6 +56,8 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /';
     $out[] = 'User-agent: AdsBot-Google-Mobile';
     $out[] = 'Disallow: /';
+    // While I sometimes (borderline 'rare') use LLMs (GPT, Gemini, …), I'd rather prefer LLMs not use my stuff to profit
+    // Well I think my stuff is mostly out of interest for them, tho…
     $out[] = '# ChatGPT Crawlers are not welcome';
     $out[] = '# Ref: https://platform.openai.com/docs/plugins/bot';
     $out[] = 'User-agent: ChatGPT-User';
@@ -65,6 +67,22 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = '# Google Gemini AI Crawlers are also not welcome';
     $out[] = '# Ref: https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers?hl=en#google-extended';
     $out[] = 'User-agent: Google-Extended';
+    $out[] = 'Disallow: /';
+    $out[] = '# CCBot (ab)used to train LLMs';
+    $out[] = '# Ref: https://darkvisitors.com/agents/ccbot';
+    $out[] = 'User-agent: CCBot';
+    $out[] = 'Disallow: /';
+    $out[] = '# Facebook LLM Bot';
+    $out[] = '# Ref: https://developers.facebook.com/docs/sharing/bot/';
+    $out[] = 'User-agent: FacebookBot';
+    $out[] = 'Disallow: /';
+    $out[] = '# DiffBot, though this one is known to have option to ignore robotstxt';
+    $out[] = '# Ref https://docs.diffbot.com/docs/why-is-my-crawl-not-crawling-and-other-uncommon-crawl-problems';
+    $out[] = 'User-agent: Diffbot';
+    $out[] = 'Disallow: /';
+    $out[] = '# Bytespider';
+    $out[] = '# Ref: https://darkvisitors.com/agents/bytespider';
+    $out[] = 'User-agent: Bytespider';
     $out[] = 'Disallow: /';
     // Crawl-delay entries at the bottom
     // Ref: https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
