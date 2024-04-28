@@ -3,6 +3,7 @@
 <title>
 Hey revi, what time is it for you?
 </title>
+<link rel="icon" href="https://r2.revicdn.net/pfp2.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans+KR:wght@300;400&family=Noto+Sans+KR&family=Ubuntu+Mono&display=swap');
 
@@ -41,7 +42,7 @@ $currentEpoch = time();
 $zonestampLink = "https://zonestamp.toolforge.org/{$currentEpoch}";
 
 // Display the message with formatted date, time, and Zonestamp link
-echo "It is {$date} {$time} in <code>Asia/Seoul</code>, where <a rel='me' href='https://revi.xyz'>revi</a> lives.<br />Check in your timezone: <a href='{$zonestampLink}'>ZoneStamp</a>.<br /><hr><a href='https://github.com/revi/sandbox/blob/master/time.php'>Source code @ GitHub</a>. (Warning: it is far from 'clean'.)";
+echo "It is {$date} {$time} in <code>Asia/Seoul</code>, where <a rel='me' href='https://revi.xyz'>revi</a> lives.<br />Check in your timezone: <a href='{$zonestampLink}'>ZoneStamp</a>.<br /><hr><a href='https://github.com/revi/sandbox/blob/master/time.php'>Source code @ GitHub</a>. (Warning: it is far from 'clean'.) Also, please note that there is <a href='https://xkcd.com/1179/'>only one correct way to write dates</a>.";
 
 ?>
 </body>
