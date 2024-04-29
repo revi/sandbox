@@ -13,7 +13,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     // Version timestamp is when I started editing them.
     // Edit setLastModified at the bottom as well.
     // Calculate EpochTime via go/ZoneStamp
-    $out[] = '# version: 20240429T175800+0900';
+    $out[] = '# version: 20240430T032700+0900';
     $out[] = '# also at https://github.com/revi/sandbox.git';
     $out[] = 'User-Agent: *';
     $out[] = 'Disallow: /diffusion/';
@@ -100,6 +100,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
       ->setContent($content)
       ->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
       ->setCanCDN(true)
-      ->setLastModified(1714381080);
+      ->setLastModified(1714415220);
   }
 }
