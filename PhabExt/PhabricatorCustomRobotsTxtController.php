@@ -19,7 +19,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /diffusion/';
     $out[] = 'Disallow: /source/';
     $out[] = 'Disallow: /multimeter/';
-    $out[] = 'Disallow: /file/';
     $out[] = 'Disallow: /policy/explain';
     $out[] = 'Disallow: /auth';
     $out[] = 'Disallow: /login';
