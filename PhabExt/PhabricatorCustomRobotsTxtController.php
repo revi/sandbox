@@ -11,7 +11,9 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 
     $out[] = '# Forked from phabricator.wikimedia.org, we.phorge.it';
     // Version timestamp is when I started editing them.
-    $out[] = '# version: 20240421T042000+0900';
+    // Edit setLastModified at the bottom as well.
+    // Calculate EpochTime via go/ZoneStamp
+    $out[] = '# version: 20240429T175800+0900';
     $out[] = '# also at https://github.com/revi/sandbox.git';
     $out[] = 'User-Agent: *';
     $out[] = 'Disallow: /diffusion/';
@@ -35,10 +37,14 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     $out[] = 'Disallow: /herald';
     // This is commits.
     $out[] = 'Disallow: /r*';
+    // This is Files. (F$)
+    $out[] = 'Disallow: /file';
+    $out[] = 'Disallow: /F*%24*';
     // This is pastes (P$)
+    $out[] = 'Disallow: /paste';
     $out[] = 'Disallow: /P*%24*';
-    $out[] = 'Disallow: /phame';
     // This is blog entries (J$)
+    $out[] = 'Disallow: /phame';
     $out[] = 'Disallow: /J*%24*';
     // This is user list.
     // As of 2024-04-17 user list is behind auth but who knows it might change?
@@ -94,6 +100,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
     return id(new AphrontPlainTextResponse())
       ->setContent($content)
       ->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
-      ->setCanCDN(true);
+      ->setCanCDN(true)
+      ->setLastModified(1714381080);
   }
 }
