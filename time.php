@@ -53,9 +53,7 @@ $currentEpoch = time();
 $zonestampLink = "https://zonestamp.toolforge.org/{$currentEpoch}";
 
 // Display the message with formatted date, time, and Zonestamp link
-<p>
-echo "It is {$date} {$time} in <code>Asia/Seoul</code>, where <a rel='me' href='https://revi.xyz'>revi</a> lives.<br />Check in your timezone: <a href='{$zonestampLink}'>ZoneStamp</a>.";
-</p>
+echo "<p>It is {$date} {$time} in <code>Asia/Seoul</code>, where <a rel='me' href='https://revi.xyz'>revi</a> lives.<br />Check in your timezone: <a href='{$zonestampLink}'>ZoneStamp</a>.</p>";
 
 ?>
 <br />
