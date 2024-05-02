@@ -12,7 +12,5 @@ jobs:
   phpsyntax:
     runs-on: ubuntu-latest
     steps:
-      - name: "PHP Basic Syntax Check [robots.txt]"
+      - name: PHP Basic Syntax Check
         run: php -l PhabExt/PhabricatorCustomRobotsTxtController.php
-      - name: "PHP Basic Syntax Check [time.php]"
-        run: php -l time.php
