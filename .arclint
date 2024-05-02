@@ -1,0 +1,7 @@
+{
+  "linters": {
+    "PHP Error Check": {
+      "type": "php"
+    }
+  }
+}
