@@ -1,9 +1,13 @@
-<html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 <title>
 Hey revi, what time is it for you?
 </title>
 <link rel="icon" href="https://r2.revicdn.net/pfp2.png">
+<meta property="og:title" content="Hey revi, what time is it for you?" />
+<meta property="og:description" content="A simple page that shows current date and time for revi." />
+<meta property="og:image" content="https://r2.revicdn.net/pfp2.png" />
+<meta property="og:url" content="https://k.revi.xyz/time.php" />
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans+KR:wght@300;400&family=Noto+Sans+KR&display=swap');
 
@@ -13,6 +17,8 @@ body {
 	line-height: 1.6;
 	font-size: 16px;
 	padding: 0 10px;
+	overflow-wrap: break-all;
+	word-break: keep-all;
 	font-family:
 		'IBM Plex Sans KR',
 		'Noto Sans KR',
@@ -26,10 +32,10 @@ body {
 		'Segoe UI Emoji';
 }
 .code {
-  font-family:
-  	'IBM Plex Mono',
-	'Courier New',
-	monospace;
+	font-family:
+		'IBM Plex Mono',
+		'Courier New',
+		monospace;
 }
 </style>
 </head>
@@ -56,7 +62,6 @@ $zonestampLink = "https://zonestamp.toolforge.org/{$currentEpoch}";
 echo "<p>It is {$date} {$time} in <code>Asia/Seoul</code>, where <a rel='me' href='https://revi.xyz'>revi</a> lives.<br />Check in your timezone: <a href='{$zonestampLink}'>ZoneStamp</a>.</p>";
 
 ?>
-<br />
 <hr>
 <p><a href='https://github.com/revi/sandbox/blob/master/time.php'>Source code @ GitHub</a>. (Warning: it is far from 'clean'.) Also, please note that there is <a href='https://xkcd.com/1179/'>only one correct way to write dates</a>.</p>
 </body>
