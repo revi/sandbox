@@ -1,6 +1,6 @@
 <?php
 
-abstract class PhabricatorRobotsController extends PhabricatorController {
+abstract class PhabricatorRobotsPlatformController extends PhabricatorRobotsController {
 
 	public function shouldRequireLogin() {
 		return false;
@@ -103,6 +103,8 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 
 	$content = implode("\n", $out)."\n";
 
+	// ToDo: Cloudflare does not cache the robots.txt due to the presence of Set-Cookie.
+	// T126
 	return id(new AphrontPlainTextResponse())
 		->setContent($content)
 		->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
