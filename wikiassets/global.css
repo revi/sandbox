@@ -1,0 +1,54 @@
+/** No betafeatures button */
+#pt-betafeatures { display: none; }
+
+/** no ULS button */
+#pt-uls { display: none; }
+
+/* I won't logout unless in preferences which is typed manually */
+#pt-logout { display: none; }
+#pt-preferences { display: none; }
+
+/** Set custom color for redirect page */
+.mw-redirect { color: #FAAFBE;}.mw-redirect:visited { color: #FAAFBE;}.mw-redirect:hover { color: #FAAFBE;}.mw-redirect:active { color: #FAAFBE;}
+
+/** No MediaViewer button on File: namespace pages */
+.mw-mmv-filepage-buttons { display: none }
+
+/* Make protected pages' edit box shown in light pink. (http://www.color-hex.com/color/ffb6c1)
+*/
+.mw-textarea-protected, .ns-8 textarea {
+  	background: #FFB6C1;
+}
+
+/* Make semi-protected pages' edit box shown in yellow. */
+.mw-textarea-sprotected {
+  background: #FFFFDB;
+}
+
+/* Edit summaries
+ (Smaller font size instead of italicize) */
+.comment {
+  font-style: normal !important;
+  font-size: 9pt;
+}
+
+/* Quick hack to force the Search tab on [[Special:Contribs]] open.
+  Credit: Volker E. (WMF) & Stwalkerster
+  [[Special:Permalink/19431311#Reverting the new "collapsed search interface" on Special:Contribs|Tech]] */
+.mw-special-Contributions .oo-ui-fieldsetLayout-group.mw-collapsible-content { display: block !important; }
+.mw-special-Contributions .oo-ui-fieldsetLayout-header { display: none !important; }
+
+/* Colorize diff size
+ (Green for + and red for -) */
+.mw-plusminus-pos {
+  color:green;
+}
+.mw-plusminus-neg {
+  color:red;
+}
+
+/* Get rid of 'partial' block. Uselessness 100% guaranteed.
+  TODO: Fix this (MW update broke this) */
+.mw-block-restriction {display: none;} /* Kills partial block target list */
+.mw-block-editing-restriction {display: none;} /* Kill Partial switch */
+.mw-block-page-restrictions { display: none; } /* Kill radio box */

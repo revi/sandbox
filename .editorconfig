@@ -21,7 +21,7 @@ indent_style = space
 
 # Tabs may not be valid YAML
 # @see https://yaml.org/spec/1.2/spec.html#id2777534
-[*.{json,yml,yaml}]
+[*.{css,js,json,yml,yaml}]
 indent_size = 2
 indent_style = space
 
