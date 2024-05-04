@@ -1,7 +1,17 @@
 {
   "linters": {
+    "merge-conflict": {
+      "type": "merge-conflict"
+    },
+    "nolint": {
+      "type": "nolint"
+    },
     "PHP Error Check": {
-      "type": "php"
+      "type": "php",
+      "include": "(\\.php$)"
+    },
+    "spelling": {
+      "type": "spelling"
     }
   }
 }

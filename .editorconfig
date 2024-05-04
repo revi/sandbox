@@ -15,18 +15,22 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
 
+[.arc*]
+indent_size = 2
+indent_style = space
+
 # Tabs may not be valid YAML
 # @see https://yaml.org/spec/1.2/spec.html#id2777534
-[*.{yml,yaml}]
-indent_style = space
+[*.{json,yml,yaml}]
 indent_size = 2
+indent_style = space
 
 # yaml-lint configuration
 # YAML files should be indented with spaces, which .yamllint is
 [.yamllint]
-indent_style = space
 indent_size = 2
+indent_style = space
 
 [.git/**]
-indent_style = space
 indent_size = 2
+indent_style = space
