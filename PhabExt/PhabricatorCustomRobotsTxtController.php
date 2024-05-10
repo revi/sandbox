@@ -1,4 +1,6 @@
 <?php
+// Copyright (C) 2024 Hong Yongmin <https://revi.xyz/>
+// SPDX-License-Identifier: Apache-2.0
 
 abstract class PhabricatorRobotsController extends PhabricatorController {
 
@@ -16,8 +18,8 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 	$out[] = '# Adapted from phabricator.wikimedia.org, we.phorge.it';
     // Version timestamp is when I started editing them.
     // Edit setLastModified at the bottom as well.
-    // Calculate EpochTime via go/ZoneStamp
-	$out[] = '# version: 20240502T184200+0900';
+    // Calculate EpochTime via go/epoch
+	$out[] = '# version: 20240509T235513+0900';
 	$out[] = '# also at https://github.com/revi/sandbox.git';
 	$out[] = 'User-Agent: *';
 	$out[] = 'Disallow: /diffusion/';
@@ -59,7 +61,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 	$out[] = 'Disallow: /p/';
 	// Phorge specific entries end here.
 	$out[] = '# This is cloudflare endpoint';
-	$out[] = '# Ref: https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/';
+	$out[] = '# Ref: https://issuetracker.revi.xyz/u/cloudflarecdncgi';
 	$out[] = 'Disallow: /cdn-cgi/';
 	$out[] = '# Google Ads are not welcome';
 	$out[] = 'User-agent: Mediapartners-Google';
@@ -77,7 +79,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 	$out[] = 'User-agent: GPTBot';
 	$out[] = 'Disallow: /';
 	$out[] = '# Google Gemini AI Crawlers are also not welcome';
-	$out[] = '# Ref: https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers?hl=en#google-extended';
+	$out[] = '# Ref: https://issuetracker.revi.xyz/u/googleextended';
 	$out[] = 'User-agent: Google-Extended';
 	$out[] = 'Disallow: /';
 	$out[] = '# CCBot (ab)used to train LLMs';
@@ -89,7 +91,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 	$out[] = 'User-agent: FacebookBot';
 	$out[] = 'Disallow: /';
 	$out[] = '# DiffBot, though this one is known to have option to ignore robotstxt';
-	$out[] = '# Ref https://docs.diffbot.com/docs/why-is-my-crawl-not-crawling-and-other-uncommon-crawl-problems';
+	$out[] = '# Ref https://issuetracker.revi.xyz/u/robotstxtdiffbot';
 	$out[] = 'User-agent: Diffbot';
 	$out[] = 'Disallow: /';
 	$out[] = '# Bytespider';
@@ -107,6 +109,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		->setContent($content)
 		->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
 		->setCanCDN(true)
-		->setLastModified(1714642920);
+		->setLastModified(1715266513);
 	}
 }
