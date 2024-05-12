@@ -1,5 +1,22 @@
 {
+  "exclude": [
+    "(^package-lock.json$)"
+  ],
   "linters": {
+    "chmod": {
+      "type": "chmod"
+    },
+    "filename": {
+      "type": "filename"
+    },
+    "json": {
+      "type": "json",
+      "include": [
+        "(\\.arcconfig$)",
+        "(\\.arclint$)",
+        "(\\.json$)"
+      ]
+    },
     "merge-conflict": {
       "type": "merge-conflict"
     },
@@ -12,6 +29,10 @@
     },
     "spelling": {
       "type": "spelling"
+    },
+    "text": {
+      "type": "text",
+      "text.max-line-length": 80
     }
   }
 }
