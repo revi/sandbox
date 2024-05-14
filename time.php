@@ -65,5 +65,6 @@ echo "<p>It is {$date} {$time} in <code>Asia/Seoul</code>, where <a rel='me' hre
 ?>
 <hr>
 <p><a href='https://github.com/revi/sandbox/blob/master/time.php'>Source code @ GitHub</a>. (Warning: it is far from 'clean'.) Also, please note that there is <a href='https://xkcd.com/1179/'>only one correct way to write dates</a>.</p>
+<p>Also another small note: the clock here uses 24 hours notation.</p>
 </body>
 </html>
