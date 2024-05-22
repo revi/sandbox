@@ -6,9 +6,6 @@
     "chmod": {
       "type": "chmod"
     },
-    "filename": {
-      "type": "filename"
-    },
     "json": {
       "type": "json",
       "include": [
@@ -34,7 +31,9 @@
       "type": "text",
       "text.max-line-length": 80,
       "severity": {
-        "2": "advice"
+        "1": "advice",
+        "2": "advice",
+        "5": "disabled"
       }
     }
   }

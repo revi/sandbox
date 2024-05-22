@@ -19,7 +19,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		// Version timestamp is when I started editing them.
 		// Edit setLastModified at the bottom as well.
 		// Calculate EpochTime via go/epoch
-		$out[] = '# version: 20240511T052727+0900';
+		$out[] = '# version: 20240523T040800+0900';
 		$out[] = '# also at https://github.com/revi/sandbox.git';
 		$out[] = 'User-Agent: *';
 		$out[] = 'Disallow: /diffusion/';
@@ -30,7 +30,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		$out[] = 'Disallow: /login';
 		$out[] = 'Disallow: /maniphest/transaction';
 		$out[] = 'Disallow: /tag';
-		$out[] = 'Disallow: /search/query/all';
+		$out[] = 'Disallow: /search/';
 		$out[] = 'Disallow: /conduit';
 		$out[] = 'Disallow: /api';
 		$out[] = 'Disallow: /project';
@@ -98,6 +98,9 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		$out[] = '# Ref: https://darkvisitors.com/agents/bytespider';
 		$out[] = 'User-agent: Bytespider';
 		$out[] = 'Disallow: /';
+		$out[] = '# Block PetalBot, misbehaving';
+		$out[] = 'User-agent: PetalBot';
+		$out[] = 'Disallow: /';
 		// Crawl-delay entries at the bottom
 		// Ref: https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
 		$out[] = 'User-agent: *';
@@ -109,6 +112,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 			->setContent($content)
 			->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
 			->setCanCDN(true)
-			->setLastModified(1715372847);
+			->setLastModified(1716404880);
 	}
 }
