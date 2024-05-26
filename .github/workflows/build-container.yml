@@ -3,9 +3,11 @@ on:
   push:
     paths:
       - 'container/**'
+      - '.github/workflows/build-container.yml'
   pull_request:
     paths:
       - 'container/**'
+      - '.github/workflows/build-container.yml'
   workflow_dispatch:
 
 env:
