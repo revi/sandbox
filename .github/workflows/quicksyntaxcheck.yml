@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PHP Basic Syntax Check
-        run: php -l PhabExt/PhabricatorCustomRobotsTxtController.php
+        run: php -l {{ $github.workspace }}/PhabExt/PhabricatorCustomRobotsTxtController.php
