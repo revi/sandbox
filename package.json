@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "csslint": "^1.0.5"
+  "name": "@revi/scripts",
+  "private": true,
+  "devDependencies": {
+    "csslint": "^1.0.5",
+    "jshint": "^2.13.6",
+    "prettier": "^3.3.1"
+  },
+  "scripts": {
+    "pcheck": "prettier --check .",
+    "pwrite": "prettier --write ."
   }
 }
