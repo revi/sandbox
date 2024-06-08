@@ -26,19 +26,19 @@ jobs:
       - name: "Checkout the repository"
         uses: actions/checkout@v4
       - name: "Log in to the Container registry"
-        uses: docker/login-action@70fccc794acd729b2b22dd6a326895f286447728
+        uses: docker/login-action@v3.2.0
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: "Extract metadata (tags, labels) for Docker"
         id: meta
-        uses: docker/metadata-action@f7b4ed12385588c3f9bc252f0a2b520d83b52d48
+        uses: docker/metadata-action@v5.5.1
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: "Build and push Docker image"
         id: push
-        uses: docker/build-push-action@2a53c6ccda456d31fb62eedc658aae06e238b7bd
+        uses: docker/build-push-action@v5.3.0
         with:
           context: ${{ github.workspace }}/container/lighthouse-ci-server
           file: ${{ github.workspace }}/container/lighthouse-ci-server/Dockerfile
