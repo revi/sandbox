@@ -16,7 +16,12 @@
     },
     "jshint": {
       "type": "jshint",
-      "include": "(\\.js$)"
+      "include": [
+        "(\\.cjs$)",
+        "(\\.js$)",
+        "(\\.mjs$)"
+      ],
+      "jshint.jshintrc": ".jshint.json"
     },
     "json": {
       "type": "json",
