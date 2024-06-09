@@ -1,3 +1,7 @@
+# Bot Credential file, do not commit.
+# See https://www.npmjs.com/package/wikiploy
+*.bot.config.mjs
+
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
