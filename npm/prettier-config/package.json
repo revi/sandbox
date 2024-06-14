@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@revi/prettier-config",
+  "version": "0.0.1",
+  "description": "@revi's prettier configs",
+  "main": "prettier.config.js",
+  "dependencies": {
+    "prettier": "^3.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revi/sandbox/blob/master/npm-prettier-config"
+  },
+  "bugs": {
+    "url": "https://revi.xyz/new"
+  },
+  "keywords": [
+    "prettier"
+  ],
+  "type": "module",
+  "scripts": {
+    "p:c": "prettier --check"
+  },
+  "author": "revi",
+  "license": "Apache-2.0"
+}

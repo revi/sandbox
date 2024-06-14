@@ -1,5 +1,4 @@
 *        text=auto
-*.sh     text=auto  eol=lf
 
 *.asc    binary
 *.gif    binary

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/scripts",
   "private": true,
   "devDependencies": {
@@ -7,7 +8,10 @@
     "prettier": "^3.3.1"
   },
   "scripts": {
-    "p:c": "prettier --check .",
-    "p:w": "prettier --write ."
-  }
+    "p:c": "prettier --check",
+    "p:w": "prettier --write"
+  },
+  "workspaces": [
+    "npm/prettier-config"
+  ]
 }
