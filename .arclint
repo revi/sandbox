@@ -1,8 +1,5 @@
 {
-  "exclude": [
-    "(^node_modules/)",
-    "(^package-lock.json$)"
-  ],
+  "exclude": ["(^node_modules/)", "(^package-lock.json$)"],
   "linters": {
     "chmod": {
       "type": "chmod"
@@ -16,20 +13,12 @@
     },
     "jshint": {
       "type": "jshint",
-      "include": [
-        "(\\.cjs$)",
-        "(\\.js$)",
-        "(\\.mjs$)"
-      ],
+      "include": ["(\\.cjs$)", "(\\.js$)", "(\\.mjs$)"],
       "jshint.jshintrc": ".jshint.json"
     },
     "json": {
       "type": "json",
-      "include": [
-        "(^\\.arcconfig$)",
-        "(^\\.arclint$)",
-        "(\\.json$)"
-      ]
+      "include": ["(^\\.arcconfig$)", "(^\\.arclint$)", "(\\.json$)"]
     },
     "merge-conflict": {
       "type": "merge-conflict"
@@ -46,10 +35,7 @@
     },
     "text": {
       "type": "text",
-      "exclude": [
-        "(^.gitignore$)",
-        "(\\.md)"
-      ],
+      "exclude": ["(^.gitignore$)", "(\\.md)"],
       "text.max-line-length": 80,
       "severity": {
         "1": "autofix",
@@ -60,10 +46,7 @@
     },
     "text-no-linelength": {
       "type": "text",
-      "include": [
-        "(^.gitignore$)",
-        "(\\.md)"
-      ],
+      "include": ["(^.gitignore$)", "(\\.md)"],
       "severity": {
         "1": "autofix",
         "2": "advice",

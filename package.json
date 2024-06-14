@@ -3,6 +3,7 @@
   "name": "@revi/scripts",
   "private": true,
   "devDependencies": {
+    "@revi/prettier-config": "^0.0.1",
     "csslint": "^1.0.5",
     "jshint": "^2.13.6",
     "prettier": "^3.3.1"
@@ -11,6 +12,7 @@
     "p:c": "prettier --check",
     "p:w": "prettier --write"
   },
+  "prettier": "@revi/prettier-config",
   "workspaces": [
     "npm/prettier-config"
   ]
