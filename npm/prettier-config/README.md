@@ -1,13 +1,10 @@
-// @ts-check
-/**
- * @file revi's prettier config preset
- * @see https://prettier.io/docs/en/configuration.html
- * @type {import("prettier").Config}
- * @copyright Hong Yongmin 2024
- * @license Apache-2.0
- */
+# @revi/prettier-config
 
-// Update README.md when you update the config.
+This is [@revi](https://revi.xyz/)'s personal [prettier](https://prettier.io/docs/en/) config.
+
+## Config
+
+```js
 const config = {
   bracketSpacing: false,
   bracketSameLine: true,
@@ -37,5 +34,4 @@ const config = {
     },
   ],
 };
-
-export default config;
+```
