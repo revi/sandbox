@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "@revi's shared eslint config",
   "main": "eslint.config.js",
   "peerDependencies": {
@@ -21,6 +21,11 @@
   "keywords": [
     "eslint"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revi/sandbox.git",
+    "directory": "npm/eslint-config"
+  },
   "author": {
     "name": "Yongmin Hong",
     "url": "https://revi.xyz/",

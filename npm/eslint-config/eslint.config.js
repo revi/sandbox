@@ -12,7 +12,7 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
-const config = [
+export default [
   pluginJs.configs.recommended,
   {
     rules: {
@@ -23,5 +23,3 @@ const config = [
   {languageOptions: {globals: globals.browser}},
   eslintConfigPrettier,
 ];
-
-export default config;

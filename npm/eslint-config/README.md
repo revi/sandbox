@@ -5,7 +5,11 @@ This is [@revi](https://revi.xyz/)'s personal [eslint](https://eslint.org/docs/l
 ## Config
 
 ```js
-const config = [
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+
+export default [
   pluginJs.configs.recommended,
   {
     rules: {
