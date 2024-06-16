@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@revi/eslint-config",
+  "version": "0.0.1",
+  "description": "@revi's shared eslint config",
+  "main": "eslint.config.js",
+  "peerDependencies": {
+    "@eslint/js": "^8.0.0 || ^9.0.0",
+    "eslint": "^8.0.0 || ^9.0.0",
+    "globals": "^15.4.0"
+  },
+  "devDependencies": {
+    "@revi/prettier-config": "^0.0.2",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.2"
+  },
+  "scripts": {
+    "test": "prettier --check"
+  },
+  "funding": "https://github.com/sponsors/revi",
+  "keywords": [
+    "eslint"
+  ],
+  "author": {
+    "name": "Yongmin Hong",
+    "url": "https://revi.xyz/",
+    "email": "revi@omglol.email"
+  },
+  "type": "module",
+  "license": "Apache-2.0"
+}
