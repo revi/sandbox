@@ -53,6 +53,10 @@
         "3": "disabled",
         "5": "disabled"
       }
+    },
+    "yaml lint": {
+      "type": "yamllint",
+      "include": ["(\\.yaml$)", "(\\.yml$)", "(^.yamllint$)"]
     }
   }
 }

@@ -12,5 +12,7 @@ jobs:
   phpsyntax:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: PHP Basic Syntax Check
         run: php -l {{ $github.workspace }}/PhabExt/PhabricatorCustomRobotsTxtController.php
