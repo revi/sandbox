@@ -1,3 +1,4 @@
+---
 # https://issuetracker.revi.xyz/u/dependabot
 # for documentation link
 
@@ -30,7 +31,6 @@ updates:
       time: '10:00'
       timezone: 'Asia/Seoul'
     target-branch: 'master'
-    labels: []
     # Maintain dependencies for NPM
   - package-ecosystem: 'npm'
     assignees:
@@ -43,4 +43,3 @@ updates:
       time: '10:00'
       timezone: 'Asia/Seoul'
     target-branch: 'master'
-    labels: []

@@ -1,11 +1,10 @@
+---
 name: 'PHP Syntax Check'
 on:
   push:
     paths:
       - '**.php'
   pull_request:
-    paths:
-      - '**.php'
   workflow_dispatch:
 
 jobs:
@@ -15,4 +14,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: PHP Basic Syntax Check
-        run: php -l {{ $github.workspace }}/PhabExt/PhabricatorCustomRobotsTxtController.php
+        run: php -l ${{ github.workspace }}/PhabExt/PhabricatorCustomRobotsTxtController.php
