@@ -8,9 +8,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		return false;
 	}
 
-	public function setClientIDCookie() {
-		return false;
-	}
+	// TODO: Different content for cdn domains
 
 	public function processRequest() {
 		$out = array();
@@ -19,7 +17,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		// Version timestamp is when I started editing them.
 		// Edit setLastModified at the bottom as well.
 		// Calculate EpochTime via go/epoch
-		$out[] = '# version: 20240523T040800+0900';
+		$out[] = '# version: 20240616T191900+0900';
 		$out[] = '# also at https://github.com/revi/sandbox.git';
 		$out[] = 'User-Agent: *';
 		$out[] = 'Disallow: /diffusion/';
@@ -101,6 +99,27 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		$out[] = '# Block PetalBot, misbehaving';
 		$out[] = 'User-agent: PetalBot';
 		$out[] = 'Disallow: /';
+		$out[] = '# Block peer39';
+		$out[] = 'User-agent: peer39_crawler';
+		$out[] = 'User-agent: peer39_crawler/1.0';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block SemRushBot';
+		$out[] = 'User-agent: SemrushBot';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block AhrefsBot';
+		$out[] = 'User-agent: AhrefsBot';
+		$out[] = 'Disallow: /';
+		$out[] = '# See https://revi.xyz/robots.txt for rationales';
+		$out[] = 'User-agent: TurnitinBot';
+		$out[] = 'Disallow: /';
+		$out[] = 'User-agent: NPBot';
+		$out[] = 'Disallow: /';
+		$out[] = 'User-agent: SlySearch';
+		$out[] = 'Disallow: /';
+		$out[] = 'User-agent: BLEXBot';
+		$out[] = 'Disallow: /';
+		$out[] = 'User-agent: BrandVerity/1.0';
+		$out[] = 'Disallow: /';
 		// Crawl-delay entries at the bottom
 		// Ref: https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
 		$out[] = 'User-agent: *';
@@ -111,7 +130,8 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		return id(new AphrontPlainTextResponse())
 			->setContent($content)
 			->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
+			->setClientIDCookie(false)
 			->setCanCDN(true)
-			->setLastModified(1716404880);
+			->setLastModified(1718533140);
 	}
 }
