@@ -9,8 +9,9 @@ on:
 
 jobs:
   eslint-config:
+    name: 'Publish eslint-config to npm'
     runs-on: ubuntu-latest
-    if: github.ref_name == 'eslint-config@v*'
+    if: contains(github.ref_name, 'eslint-config@')
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
@@ -29,8 +30,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   prettier-config:
+    name: 'Publish prettier-config to npm'
     runs-on: ubuntu-latest
-    if: github.ref_name == 'prettier-config@v*'
+    if: contains(github.ref_name, 'prettier-config@')
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
