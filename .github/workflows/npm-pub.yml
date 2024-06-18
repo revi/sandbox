@@ -1,0 +1,49 @@
+---
+name: Publish Package to npmjs
+
+on:
+  push:
+    tags:
+      - 'eslint-config@v*'
+      - 'prettier-config@v*'
+
+jobs:
+  eslint-config:
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'eslint-config@v*'
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+      # Setup .npmrc file to publish to npm
+      - name: 'Setup node.js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: 'Install dependencies'
+        run: npm ci --fund=false
+      - name: 'Publish to npm'
+        run: npm publish --provenance --access public
+        working-directory: './npm/eslint-config'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  prettier-config:
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'prettier-config@v*'
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+      # Setup .npmrc file to publish to npm
+      - name: 'Setup node.js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: 'Install dependencies'
+        run: npm ci --fund=false
+      - name: 'Publish to npm'
+        run: npm publish --provenance --access public
+        working-directory: './npm/prettier-config'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
