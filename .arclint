@@ -35,7 +35,7 @@
     },
     "text": {
       "type": "text",
-      "exclude": ["(^.gitignore$)", "(\\.md)"],
+      "exclude": ["(^.gitignore$)", "(\\.md)", "(\\.php)"],
       "text.max-line-length": 80,
       "severity": {
         "1": "autofix",
@@ -44,13 +44,24 @@
         "5": "disabled"
       }
     },
-    "text-no-linelength": {
+    "text-markdown": {
       "type": "text",
       "include": ["(^.gitignore$)", "(\\.md)"],
       "severity": {
         "1": "autofix",
         "2": "advice",
         "3": "disabled",
+        "5": "disabled"
+      }
+    },
+    "text-php": {
+      "type": "text",
+      "exclude": ["(\\.php)"],
+      "text.max-line-length": 80,
+      "severity": {
+        "1": "autofix",
+        "2": "disabled",
+        "3": "advice",
         "5": "disabled"
       }
     },

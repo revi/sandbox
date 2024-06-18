@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/prettier-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "revi",
     "email": "revi@omglol.email",
@@ -10,7 +10,10 @@
   "description": "@revi's prettier configs",
   "main": "prettier.config.js",
   "peerDependencies": {
-    "prettier": "^3.3.2"
+    "@prettier/plugin-php": "0.22.2",
+    "prettier": "3.3.2",
+    "prettier-plugin-sh": "0.14.0",
+    "prettier-plugin-toml": "2.0.1"
   },
   "scripts": {
     "p:c": "prettier --check"

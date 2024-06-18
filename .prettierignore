@@ -1,2 +1,4 @@
-node_modules/
+.gitmodules
 .pinterest-linters/
+CODEOWNERS
+node_modules/
