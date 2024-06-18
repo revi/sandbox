@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/revi/sandbox.git",
+    "url": "git+https://github.com/revi/sandbox.git",
     "directory": "npm/eslint-config"
   },
   "author": {

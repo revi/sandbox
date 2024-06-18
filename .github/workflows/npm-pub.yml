@@ -11,6 +11,9 @@ jobs:
   eslint-config:
     name: 'Publish eslint-config to npm'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     if: contains(github.ref_name, 'eslint-config@')
     steps:
       - name: 'Checkout'
@@ -32,6 +35,9 @@ jobs:
   prettier-config:
     name: 'Publish prettier-config to npm'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     if: contains(github.ref_name, 'prettier-config@')
     steps:
       - name: 'Checkout'
