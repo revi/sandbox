@@ -5,6 +5,9 @@ on:
     paths:
       - 'container/**'
       - '.github/workflows/build-container.yml'
+    tags-ignore:
+      - 'eslint-config@v*'
+      - 'prettier-config@v*'
   pull_request:
     paths:
       - 'container/**'
