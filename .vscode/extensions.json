@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "avive.arcanist",
+    "christian-kohler.npm-intellisense",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions"
+  ]
+}

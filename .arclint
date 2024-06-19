@@ -18,7 +18,8 @@
     },
     "json": {
       "type": "json",
-      "include": ["(^\\.arcconfig$)", "(^\\.arclint$)", "(\\.json$)"]
+      "include": ["(^\\.arcconfig$)", "(^\\.arclint$)", "(\\.json$)"],
+      "exclude": ["(^.vscode/*.json$)"]
     },
     "merge-conflict": {
       "type": "merge-conflict"
