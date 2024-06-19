@@ -17,7 +17,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		// Version timestamp is when I started editing them.
 		// Edit setLastModified at the bottom as well.
 		// Calculate EpochTime via go/epoch
-		$out[] = '# version: 20240616T191900+0900';
+		$out[] = '# version: 20240619T151433+0900';
 		$out[] = '# also at https://github.com/revi/sandbox.git';
 		$out[] = 'User-Agent: *';
 		$out[] = 'Disallow: /diffusion/';
@@ -88,26 +88,14 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		$out[] = '# Ref: https://developers.facebook.com/docs/sharing/bot/';
 		$out[] = 'User-agent: FacebookBot';
 		$out[] = 'Disallow: /';
-		$out[] = '# DiffBot, though this one is known to have option to ignore robotstxt';
+		$out[] =
+			'# DiffBot, though this one is known to have option to ignore robotstxt';
 		$out[] = '# Ref https://issuetracker.revi.xyz/u/robotstxtdiffbot';
 		$out[] = 'User-agent: Diffbot';
 		$out[] = 'Disallow: /';
 		$out[] = '# Bytespider';
 		$out[] = '# Ref: https://darkvisitors.com/agents/bytespider';
 		$out[] = 'User-agent: Bytespider';
-		$out[] = 'Disallow: /';
-		$out[] = '# Block PetalBot, misbehaving';
-		$out[] = 'User-agent: PetalBot';
-		$out[] = 'Disallow: /';
-		$out[] = '# Block peer39';
-		$out[] = 'User-agent: peer39_crawler';
-		$out[] = 'User-agent: peer39_crawler/1.0';
-		$out[] = 'Disallow: /';
-		$out[] = '# Block SemRushBot';
-		$out[] = 'User-agent: SemrushBot';
-		$out[] = 'Disallow: /';
-		$out[] = '# Block AhrefsBot';
-		$out[] = 'User-agent: AhrefsBot';
 		$out[] = 'Disallow: /';
 		$out[] = '# See https://revi.xyz/robots.txt for rationales';
 		$out[] = 'User-agent: TurnitinBot';
@@ -118,20 +106,59 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		$out[] = 'Disallow: /';
 		$out[] = 'User-agent: BLEXBot';
 		$out[] = 'Disallow: /';
+		$out[] = '# Block CheckMarkNetwork';
+		$out[] =
+			'User-agent: CheckMarkNetwork/1.0 (+https://www.checkmarknetwork.com/spider.html)';
+		$out[] = 'Disallow: /';
 		$out[] = 'User-agent: BrandVerity/1.0';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block peer39';
+		$out[] = 'User-agent: peer39_crawler';
+		$out[] = 'User-agent: peer39_crawler/1.0';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block PetalBot, misbehaving';
+		$out[] = 'User-agent: PetalBot';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block DotBot';
+		$out[] = 'User-agent: DotBot';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block MegaIndex';
+		$out[] = 'User-agent: MegaIndex';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block SerpstatBot';
+		$out[] = 'User-agent: serpstatbot';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block SeekportBot';
+		$out[] = 'User-agent: SeekportBot';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block SemRushBot';
+		$out[] = 'User-agent: SemrushBot';
+		$out[] = 'Disallow: /';
+		$out[] = '# Block AhrefsBot';
+		$out[] = 'User-agent: AhrefsBot';
 		$out[] = 'Disallow: /';
 		// Crawl-delay entries at the bottom
 		// Ref: https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
+		$out[] = '# Throttle MJ12bot';
+		$out[] = 'User-agent: MJ12bot';
+		$out[] = 'Crawl-delay: 10';
+		$out[] = '# Throttle YandexBot';
+		$out[] = 'User-agent: YandexBot';
+		$out[] = 'Crawl-delay: 5';
+		$out[] = '# Throttle BingBot';
+		$out[] = 'User-agent: bingbot';
+		$out[] = 'Crawl-delay: 5';
+		$out[] = '# Throttle all other bots';
 		$out[] = 'User-agent: *';
-		$out[] = 'Crawl-delay: 1';
+		$out[] = 'Crawl-delay: 5';
 
 		$content = implode("\n", $out)."\n";
 
 		return id(new AphrontPlainTextResponse())
 			->setContent($content)
 			->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
-			->setClientIDCookie(false)
+			// ->setClientIDCookie(false) (Doesn't work /shrug)
 			->setCanCDN(true)
-			->setLastModified(1718533140);
+			->setLastModified(1718777673);
 	}
 }
