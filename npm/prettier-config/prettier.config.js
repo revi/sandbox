@@ -48,7 +48,7 @@ const config = {
     },
     {
       files: ['.vscode/*.json', '**.hujson'],
-      options: {parser: 'jsonc'},
+      options: {parser: 'jsonc', trailingComma: 'none'},
     },
     {
       files: '.yamllint',
