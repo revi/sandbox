@@ -47,7 +47,14 @@ const config = {
       options: {parser: 'json'},
     },
     {
-      files: ['.vscode/*.json', '**.hujson'],
+      files: [
+        '.vscode/*.json',
+        '**.hujson',
+        'jsconfig.json',
+        'jsconfig.*.json',
+        'tsconfig.json',
+        'tsconfig.*.json',
+      ],
       options: {parser: 'jsonc', trailingComma: 'none'},
     },
     {

@@ -19,7 +19,7 @@
     "json": {
       "type": "json",
       "include": ["(^\\.arcconfig$)", "(^\\.arclint$)", "(\\.json$)"],
-      "exclude": ["(^.vscode/*.json$)"]
+      "exclude": ["(^.vscode/*.json$)", "(^tsconfig.json$)"]
     },
     "merge-conflict": {
       "type": "merge-conflict"
@@ -57,7 +57,7 @@
     },
     "text-php": {
       "type": "text",
-      "exclude": ["(\\.php)"],
+      "include": ["(\\.php)"],
       "text.max-line-length": 80,
       "severity": {
         "1": "autofix",
