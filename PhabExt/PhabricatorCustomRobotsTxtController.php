@@ -17,43 +17,64 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		// Version timestamp is when I started editing them.
 		// Edit setLastModified at the bottom as well.
 		// Calculate EpochTime via go/epoch
-		$out[] = '# version: 20240619T151433+0900';
+		$out[] = '# version: 20240621T160501+0900';
 		$out[] = '# also at https://github.com/revi/sandbox.git';
 		$out[] = 'User-Agent: *';
 		$out[] = 'Disallow: /diffusion/';
+		$out[] = 'Disallow: /diffusion';
 		$out[] = 'Disallow: /source/';
+		$out[] = 'Disallow: /source';
 		$out[] = 'Disallow: /multimeter/';
+		$out[] = 'Disallow: /multimeter';
 		$out[] = 'Disallow: /policy/explain';
+		$out[] = 'Disallow: /auth/';
 		$out[] = 'Disallow: /auth';
+		$out[] = 'Disallow: /login/';
 		$out[] = 'Disallow: /login';
+		$out[] = 'Disallow: /maniphest/transaction/';
 		$out[] = 'Disallow: /maniphest/transaction';
+		$out[] = 'Disallow: /tag/';
 		$out[] = 'Disallow: /tag';
 		$out[] = 'Disallow: /search/';
+		$out[] = 'Disallow: /search';
+		$out[] = 'Disallow: /conduit/';
 		$out[] = 'Disallow: /conduit';
+		$out[] = 'Disallow: /api/';
 		$out[] = 'Disallow: /api';
+		$out[] = 'Disallow: /project/';
 		$out[] = 'Disallow: /project';
+		$out[] = 'Disallow: /applications/';
 		$out[] = 'Disallow: /applications';
+		$out[] = 'Disallow: /token/';
 		$out[] = 'Disallow: /token';
+		$out[] = 'Disallow: /pholio/';
 		$out[] = 'Disallow: /pholio';
+		$out[] = 'Disallow: /dashboard/';
 		$out[] = 'Disallow: /dashboard';
 		$out[] = 'Disallow: /calendar';
+		$out[] = 'Disallow: /herald/';
 		$out[] = 'Disallow: /herald';
 		// This is commits.
 		$out[] = 'Disallow: /r*';
 		// This is differential revisions. (D*)
+		$out[] = 'Disallow: /differential/';
 		$out[] = 'Disallow: /differential';
 		$out[] = 'Disallow: /D*';
 		// This is Files. (F*)
+		$out[] = 'Disallow: /file/';
 		$out[] = 'Disallow: /file';
 		$out[] = 'Disallow: /F*';
 		// This is pastes (P*)
+		$out[] = 'Disallow: /paste/';
 		$out[] = 'Disallow: /paste';
 		$out[] = 'Disallow: /P*';
 		// This is blog entries (J$)
+		$out[] = 'Disallow: /phame/';
 		$out[] = 'Disallow: /phame';
 		$out[] = 'Disallow: /J*';
 		// This is user list.
 		// As of 2024-04-17 user list is behind auth but who knows it might change?
+		$out[] = 'Disallow: /people/';
 		$out[] = 'Disallow: /people';
 		// This is user profile link.
 		$out[] = 'Disallow: /p/';
@@ -159,6 +180,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 			->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
 			// ->setClientIDCookie(false) (Doesn't work /shrug)
 			->setCanCDN(true)
-			->setLastModified(1718777673);
+			->setLastModified(1718953501);
 	}
 }
