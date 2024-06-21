@@ -7,13 +7,13 @@
   "peerDependencies": {
     "@eslint/js": "^8.0.0 || ^9.0.0",
     "eslint": "^8.0.0 || ^9.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.4.0"
+    "eslint-config-prettier": "9.1.0",
+    "globals": "15.6.0"
   },
   "devDependencies": {
     "@revi/prettier-config": "0.0.2",
-    "@types/eslint__js": "^8.42.3",
-    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "8.42.3",
+    "@types/eslint-config-prettier": "6.11.3",
     "prettier": "3.3.2"
   },
   "scripts": {

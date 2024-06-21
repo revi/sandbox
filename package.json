@@ -3,13 +3,13 @@
   "name": "@revi/scripts",
   "private": true,
   "devDependencies": {
-    "@revi/eslint-config": "^0.0.2",
-    "@revi/prettier-config": "^0.0.2",
-    "csslint": "^1.0.5",
-    "eslint": "^9.5.0",
-    "eslint-config-wikimedia": "^0.28.2",
-    "jshint": "^2.13.6",
-    "prettier": "^3.3.2"
+    "@revi/eslint-config": "0.0.4",
+    "@revi/prettier-config": "0.0.5",
+    "csslint": "1.0.5",
+    "eslint": "9.5.0",
+    "eslint-config-wikimedia": "0.28.2",
+    "jshint": "2.13.6",
+    "prettier": "3.3.2"
   },
   "scripts": {
     "eslint": "eslint",
