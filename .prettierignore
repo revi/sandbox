@@ -1,4 +1,5 @@
-.gitmodules
-.pinterest-linters/
 CODEOWNERS
+.gitmodules
 node_modules/
+.pinterest-linters/
+package-lock.json

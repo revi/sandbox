@@ -26,6 +26,10 @@
     "url": "git+https://github.com/revi/sandbox.git",
     "directory": "npm/eslint-config"
   },
+  "bugs": {
+    "url": "https://revi.xyz/new",
+    "email": "bugs@phab.revi.dev"
+  },
   "keywords": [
     "eslint"
   ],
