@@ -11,7 +11,7 @@
     "globals": "15.6.0"
   },
   "devDependencies": {
-    "@revi/prettier-config": "0.0.2",
+    "@revi/prettier-config": "../prettier-config",
     "@types/eslint__js": "8.42.3",
     "@types/eslint-config-prettier": "6.11.3",
     "prettier": "3.3.2"

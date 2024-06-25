@@ -3,8 +3,8 @@
   "name": "@revi/scripts",
   "private": true,
   "devDependencies": {
-    "@revi/eslint-config": "0.0.4",
-    "@revi/prettier-config": "0.0.5",
+    "@revi/eslint-config": "./npm/eslint-config",
+    "@revi/prettier-config": "./npm/prettier-config",
     "csslint": "1.0.5",
     "eslint": "9.5.0",
     "eslint-config-wikimedia": "0.28.2",

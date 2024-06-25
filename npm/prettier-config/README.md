@@ -48,11 +48,15 @@ const config = {
     },
     {
       files: [
-        '.devcontainer/devcontainer.json',
+        '**.hujson',
         '.devcontainer.json',
         '.devcontainer/*/devcontainer.json',
+        '.devcontainer/devcontainer.json',
         '.vscode/*.json',
-        '**.hujson',
+        '**/jsconfig.json',
+        '**/jsconfig.*.json',
+        '**/tsconfig.json',
+        '**/tsconfig.*.json',
         'jsconfig.json',
         'jsconfig.*.json',
         'tsconfig.json',
