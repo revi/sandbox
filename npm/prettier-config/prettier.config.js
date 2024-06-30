@@ -21,27 +21,11 @@ const config = {
     'prettier-plugin-sh',
     // https://github.com/bd82/toml-tools/tree/master/packages/prettier-plugin-toml
     'prettier-plugin-toml',
+    // https://github.com/prettier/plugin-xml
+    '@prettier/plugin-xml',
   ],
   overrides: [
-    {
-      files: '*.php',
-      options: {
-        parser: 'php',
-        phpVersion: '8.1',
-        useTabs: true,
-        tabWidth: 4,
-        braceStyle: '1tbs',
-      },
-    },
-    {
-      files: [
-        '.editorconfig',
-        '.gitattributes',
-        '.gitignore',
-        '.prettierignore',
-      ],
-      options: {parser: 'sh', keepPadding: true, minify: false},
-    },
+    // Sort by parser alphabet.
     {
       files: ['.arcconfig', '.arclint', '.arcunit', '.imgbotconfig'],
       options: {parser: 'json'},
@@ -63,6 +47,36 @@ const config = {
         'tsconfig.*.json',
       ],
       options: {parser: 'jsonc', trailingComma: 'none'},
+    },
+    {
+      files: '*.php',
+      options: {
+        parser: 'php',
+        phpVersion: '8.1',
+        useTabs: true,
+        tabWidth: 4,
+        braceStyle: '1tbs',
+      },
+    },
+    {
+      files: [
+        '.editorconfig',
+        '.gitattributes',
+        '.gitignore',
+        '.prettierignore',
+      ],
+      options: {parser: 'sh', keepPadding: true, minify: false},
+    },
+    {
+      files: ['*.svg', '*.xml'],
+      options: {
+        parser: 'xml',
+        singleAttributePerLine: false,
+        xmlQuoteAttributes: 'preserve',
+        xmlSelfClosingSpace: true,
+        xmlSortAttributesByKey: false,
+        xmlWhitespaceSensitivity: 'strict',
+      },
     },
     {
       files: '.yamllint',

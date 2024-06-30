@@ -23,25 +23,7 @@ const config = {
     'prettier-plugin-toml',
   ],
   overrides: [
-    {
-      files: '*.php',
-      options: {
-        parser: 'php',
-        phpVersion: '8.1',
-        useTabs: true,
-        tabWidth: 4,
-        braceStyle: '1tbs',
-      },
-    },
-    {
-      files: [
-        '.editorconfig',
-        '.gitattributes',
-        '.gitignore',
-        '.prettierignore',
-      ],
-      options: {parser: 'sh', keepPadding: true, minify: false},
-    },
+    // Sort by parser alphabet.
     {
       files: ['.arcconfig', '.arclint', '.arcunit', '.imgbotconfig'],
       options: {parser: 'json'},
@@ -63,6 +45,25 @@ const config = {
         'tsconfig.*.json',
       ],
       options: {parser: 'jsonc', trailingComma: 'none'},
+    },
+    {
+      files: '*.php',
+      options: {
+        parser: 'php',
+        phpVersion: '8.1',
+        useTabs: true,
+        tabWidth: 4,
+        braceStyle: '1tbs',
+      },
+    },
+    {
+      files: [
+        '.editorconfig',
+        '.gitattributes',
+        '.gitignore',
+        '.prettierignore',
+      ],
+      options: {parser: 'sh', keepPadding: true, minify: false},
     },
     {
       files: '.yamllint',
