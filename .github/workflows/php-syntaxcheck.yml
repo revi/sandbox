@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '**.php'
+    tags-ignore:
+      - 'eslint-config@v*'
+      - 'prettier-config@v*'
   pull_request:
   workflow_dispatch:
 
