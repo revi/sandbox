@@ -1,0 +1,103 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":gitSignOff",
+    ":maintainLockFilesWeekly",
+    ":pinSkipCi",
+    ":prConcurrentLimit20",
+    ":prHourlyLimit4",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(CI)",
+    ":separateMajorReleases",
+    ":timezone(Asia/Seoul)"
+  ],
+  "assignAutomerge": true,
+  "automerge": true,
+  "platformAutomerge": true,
+  "schedule": ["* */4 * * *"],
+  "assignees": ["revi"],
+  "internalChecksFilter": "strict",
+  "npmrcMerge": true,
+  "postUpdateOptions": ["npmDedupe"],
+  "azure-pipelines": {
+    "enabled": true
+  },
+  "git-submodules": {
+    "enabled": true,
+    "versioning": "git"
+  },
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "csslint",
+        "eslint",
+        "globals",
+        "jshint",
+        "prettier",
+        "typescript",
+        "wrangler"
+      ],
+      "matchPackagePatterns": [
+        "^@eslint/",
+        "^eslint-",
+        "^@prettier/",
+        "^prettier-",
+        "^@types/"
+      ],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "internalChecksFilter": "strict",
+      "minimumReleaseAge": "3 days",
+      "labels": ["dependencies", "javascript"],
+      "schedule": ["* */6 * * *"],
+      "timezone": "Asia/Seoul",
+      "groupName": "linters"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["renovate"],
+      "schedule": ["before 4am on thursday"],
+      "labels": ["dependencies", "javascript"],
+      "prPriority": -1,
+      "groupName": "update renovate weekly (updates too often)",
+      "groupSlug": "weekly-update-renovate"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "minimumReleaseAge": "3 days",
+      "internalChecksFilter": "strict",
+      "labels": ["dependencies", "javascript"],
+      "schedule": ["* */4 * * *"],
+      "timezone": "Asia/Seoul",
+      "groupName": "npm patch upgrades"
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "platformAutomerge": false,
+      "minimumReleaseAge": "3 days",
+      "internalChecksFilter": "strict",
+      "labels": ["dependencies", "javascript"],
+      "schedule": ["* */4 * * *"],
+      "timezone": "Asia/Seoul",
+      "groupName": "npm major upgrades"
+    },
+    {
+      "matchDatasources": ["github-actions"],
+      "automerge": true,
+      "platformAutomerge": true,
+      "labels": ["dependencies", "github_actions"],
+      "schedule": ["* */4 * * *"],
+      "timezone": "Asia/Seoul",
+      "groupName": "github actions workflows upgrades"
+    }
+  ]
+}

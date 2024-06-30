@@ -15,6 +15,7 @@
   },
   "scripts": {
     "eslint": "eslint",
+    "lint:renovate": "renovate-config-validator",
     "p:c": "prettier --check",
     "p:w": "prettier --write"
   },
@@ -27,5 +28,8 @@
     "name": "Yongmin Hong",
     "url": "https://revi.xyz",
     "email": "package-admin@revi.dev"
+  },
+  "optionalDependencies": {
+    "renovate": "^37.421.0"
   }
 }
