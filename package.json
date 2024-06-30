@@ -22,5 +22,10 @@
   "workspaces": [
     "npm/eslint-config",
     "npm/prettier-config"
-  ]
+  ],
+  "author": {
+    "name": "Yongmin Hong",
+    "url": "https://revi.xyz",
+    "email": "package-admin@revi.dev"
+  }
 }
