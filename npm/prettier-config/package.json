@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/prettier-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "revi",
     "email": "package-admin@revi.dev",
@@ -11,16 +11,14 @@
   "main": "prettier.config.js",
   "types": "./types/prettier.config.d.ts",
   "peerDependencies": {
+    "prettier": "3.3.2"
+  },
+  "dependencies": {
     "@prettier/plugin-php": "0.22.2",
+    "@prettier/plugin-xml": "3.4.1",
     "prettier": "3.3.2",
     "prettier-plugin-sh": "0.14.0",
     "prettier-plugin-toml": "2.0.1"
-  },
-  "devDependencies": {
-    "@prettier/plugin-php": "0.22.2",
-    "prettier-plugin-sh": "0.14.0",
-    "prettier-plugin-toml": "2.0.1",
-    "@prettier/plugin-xml": "3.4.1"
   },
   "scripts": {
     "tsc": "tsc prettier.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"

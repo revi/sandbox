@@ -21,6 +21,8 @@ const config = {
     'prettier-plugin-sh',
     // https://github.com/bd82/toml-tools/tree/master/packages/prettier-plugin-toml
     'prettier-plugin-toml',
+    // https://github.com/prettier/plugin-xml
+    '@prettier/plugin-xml',
   ],
   overrides: [
     // Sort by parser alphabet.
@@ -64,6 +66,17 @@ const config = {
         '.prettierignore',
       ],
       options: {parser: 'sh', keepPadding: true, minify: false},
+    },
+    {
+      files: ['*.svg', '*.xml'],
+      options: {
+        parser: 'xml',
+        singleAttributePerLine: false,
+        xmlQuoteAttributes: 'preserve',
+        xmlSelfClosingSpace: true,
+        xmlSortAttributesByKey: false,
+        xmlWhitespaceSensitivity: 'strict',
+      },
     },
     {
       files: '.yamllint',
