@@ -6,8 +6,8 @@
   "main": "eslint.config.js",
   "types": "./types/index.d.ts",
   "dependencies": {
-    "@eslint/js": "9.5.0",
-    "eslint": "9.5.0",
+    "@eslint/js": "9.6.0",
+    "eslint": "9.6.0",
     "eslint-config-prettier": "9.1.0",
     "globals": "15.6.0"
   },
@@ -19,7 +19,7 @@
     "prettier": "3.3.2"
   },
   "peerDependencies": {
-    "eslint": "9.5.0"
+    "eslint": "9.6.0"
   },
   "scripts": {
     "tsc": "tsc eslint.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
