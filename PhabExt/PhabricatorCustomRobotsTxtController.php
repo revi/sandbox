@@ -17,7 +17,7 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		// Version timestamp is when I started editing them.
 		// Edit setLastModified at the bottom as well.
 		// Calculate EpochTime via go/epoch
-		$out[] = '# version: 20240621T160501+0900';
+		$out[] = '# version: 20240703T230700+0900';
 		$out[] = '# also at https://github.com/revi/sandbox.git';
 		$out[] = 'User-Agent: *';
 		$out[] = 'Disallow: /diffusion/';
@@ -101,6 +101,10 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		$out[] = '# Ref: https://issuetracker.revi.xyz/u/googleextended';
 		$out[] = 'User-agent: Google-Extended';
 		$out[] = 'Disallow: /';
+		$out[] = '# Apple AI stuff';
+		$out[] = '# Ref: https://support.apple.com/en-us/119829#datausage';
+		$out[] = 'User-agent: Applebot-Extended';
+		$out[] = 'Disallow: /';
 		$out[] = '# CCBot (ab)used to train LLMs';
 		$out[] = '# Ref: https://darkvisitors.com/agents/ccbot';
 		$out[] = 'User-agent: CCBot';
@@ -180,6 +184,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 			->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
 			// ->setClientIDCookie(false) (Doesn't work /shrug)
 			->setCanCDN(true)
-			->setLastModified(1718953501);
+			->setLastModified(1720015620);
 	}
 }
