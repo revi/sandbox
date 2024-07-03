@@ -10,6 +10,15 @@ Version bump criteria follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.1.2
+
+Date: 2024-07-04 (KST)
+
+### Update
+
+- Update `**` globs and consolidate.
+- Use `revi.kr/prettier-config` for homepage link.
+
 ## v0.1.1
 
 ### Fix
