@@ -25,7 +25,7 @@
     "tsc": "tsc eslint.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
   },
   "funding": "https://github.com/sponsors/revi",
-  "homepage": "https://github.com/revi/sandbox/tree/master/npm/eslint-config",
+  "homepage": "https://revi.kr/eslint-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/revi/sandbox.git",

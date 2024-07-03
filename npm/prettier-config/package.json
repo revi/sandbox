@@ -28,7 +28,7 @@
     "url": "git+https://github.com/revi/sandbox.git",
     "directory": "npm/prettier-config"
   },
-  "homepage": "https://github.com/revi/sandbox/tree/master/npm/prettier-config",
+  "homepage": "https://revi.kr/prettier-config",
   "bugs": {
     "url": "https://revi.xyz/new",
     "email": "bugs@phab.revi.dev"
