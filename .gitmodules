@@ -3,3 +3,7 @@
 [submodule ".pinterest-linters"]
 	path = .pinterest-linters
 	url = https://github.com/pinterest/arcanist-linters.git
+[submodule "container/copybara"]
+	path = container/copybara
+	url = https://github.com/google/copybara.git
+	branch = master

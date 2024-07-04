@@ -16,11 +16,12 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/lighthouse-ci-server
 
 jobs:
-  container-build:
-    name: 'Build and publish containers to GitHub Container Registry'
+  lighthouse-ci-build:
+    name: 'Build and publish lhci to GitHub Container Registry'
+    env:
+      IMAGE_NAME: ${{ github.repository }}/lighthouse-ci-server
     permissions:
       contents: read
       packages: write
@@ -46,6 +47,40 @@ jobs:
         with:
           context: ${{ github.workspace }}/container/lighthouse-ci-server
           file: ${{ github.workspace }}/container/lighthouse-ci-server/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+  copybara-build:
+    name: 'Build and publish copybara to GitHub Container Registry'
+    env:
+      IMAGE_NAME: ${{ github.repository }}/copybara
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+      - name: 'Log in to the Container registry'
+        uses: docker/login-action@v3.2.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Extract metadata (tags, labels) for Docker'
+        id: meta
+        uses: docker/metadata-action@v5.5.1
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      - name: 'Build and push Docker image'
+        id: push
+        uses: docker/build-push-action@v6.3.0
+        with:
+          context: ${{ github.workspace }}/container/copybara
+          file: ${{ github.workspace }}/container/copybara/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
