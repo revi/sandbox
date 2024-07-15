@@ -30,6 +30,6 @@
     "email": "package-admin@revi.dev"
   },
   "optionalDependencies": {
-    "renovate": "^37.421.0"
+    "renovate": "^37.431.4"
   }
 }
