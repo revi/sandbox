@@ -11,12 +11,12 @@
   "main": "prettier.config.js",
   "types": "./types/prettier.config.d.ts",
   "peerDependencies": {
-    "prettier": "3.3.2"
+    "prettier": "3.3.3"
   },
   "dependencies": {
     "@prettier/plugin-php": "0.22.2",
     "@prettier/plugin-xml": "3.4.1",
-    "prettier": "3.3.2",
+    "prettier": "3.3.3",
     "prettier-plugin-sh": "0.14.0",
     "prettier-plugin-toml": "2.0.1"
   },
