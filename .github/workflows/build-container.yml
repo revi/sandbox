@@ -43,7 +43,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: 'Build and push Docker image'
         id: push
-        uses: docker/build-push-action@v6.3.0
+        uses: docker/build-push-action@v6.4.1
         with:
           context: ${{ github.workspace }}/container/lighthouse-ci-server
           file: ${{ github.workspace }}/container/lighthouse-ci-server/Dockerfile
@@ -77,7 +77,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: 'Build and push Docker image'
         id: push
-        uses: docker/build-push-action@v6.3.0
+        uses: docker/build-push-action@v6.4.1
         with:
           context: ${{ github.workspace }}/container/copybara
           file: ${{ github.workspace }}/container/copybara/Dockerfile
