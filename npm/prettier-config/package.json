@@ -37,6 +37,10 @@
     "prettier"
   ],
   "packageManager": "pnpm@9.6.0",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "type": "module",
   "funding": "https://github.com/sponsors/revi",
   "license": "Apache-2.0"

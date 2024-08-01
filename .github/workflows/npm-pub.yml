@@ -23,14 +23,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.node-version'
-          cache: npm
+          cache: pnpm
           registry-url: 'https://registry.npmjs.org'
       - name: 'Install dependencies'
-        run: npm ci
+        run: pnpm install
       - name: 'Publish to npm'
-        run: npm publish --provenance --access public
+        run: pnpm publish --provenance --access public
         working-directory: './npm/eslint-config'
         env:
+          NPM_CONFIG_PROVENANCE: true
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   prettier-config:
@@ -48,12 +49,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.node-version'
-          cache: npm
+          cache: pnpm
           registry-url: 'https://registry.npmjs.org'
       - name: 'Install dependencies'
-        run: npm ci
+        run: pnpm install
       - name: 'Publish to npm'
-        run: npm publish --provenance --access public
+        run: pnpm publish --provenance --access public
         working-directory: './npm/prettier-config'
         env:
+          NPM_CONFIG_PROVENANCE: true
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

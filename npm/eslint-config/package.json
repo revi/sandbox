@@ -44,6 +44,10 @@
     "email": "package-admin@revi.dev"
   },
   "packageManager": "pnpm@9.6.0",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "type": "module",
   "license": "Apache-2.0"
 }
