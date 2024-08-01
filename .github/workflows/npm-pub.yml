@@ -30,7 +30,7 @@ jobs:
       - name: 'Install dependencies'
         run: pnpm install
       - name: 'Publish to npm'
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --access public --no-git-checks
         working-directory: './npm/eslint-config'
         env:
           NPM_CONFIG_PROVENANCE: true
@@ -58,7 +58,7 @@ jobs:
       - name: 'Install dependencies'
         run: pnpm install
       - name: 'Publish to npm'
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --access public --no-git-checks
         working-directory: './npm/prettier-config'
         env:
           NPM_CONFIG_PROVENANCE: true
