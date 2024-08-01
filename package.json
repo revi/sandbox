@@ -1,17 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/scripts",
+  "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.13",
     "csslint": "1.0.5",
-    "eslint": "9.6.0",
+    "eslint": "9.8.0",
     "eslint-config-wikimedia": "0.28.2",
     "jshint": "2.13.6",
-    "prettier": "3.3.2",
-    "typescript": "5.5.3"
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
+  },
+  "optionalDependencies": {
+    "renovate": "38.8.3"
   },
   "scripts": {
     "eslint": "eslint",
@@ -19,17 +23,11 @@
     "p:c": "prettier --check",
     "p:w": "prettier --write"
   },
+  "packageManager": "pnpm@9.6.0",
   "prettier": "@revi/prettier-config",
-  "workspaces": [
-    "npm/eslint-config",
-    "npm/prettier-config"
-  ],
   "author": {
     "name": "Yongmin Hong",
     "url": "https://revi.xyz",
     "email": "package-admin@revi.dev"
-  },
-  "optionalDependencies": {
-    "renovate": "^37.421.0"
   }
 }

@@ -4,11 +4,19 @@ Pre-`v0.1.0` changelog is not available.
 
 New entry is listed at the top, and old logs may get truncated.
 
-Version bump criteria follows:
+Version bump criteria is as follows:
 
 - major: When the plugin is removed.
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
+
+## v0.1.3
+
+Date: 2024-08-01 (KST)
+
+### Update
+
+- Update prettier to `v3.3.3`.
 
 ## v0.1.2
 

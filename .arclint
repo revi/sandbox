@@ -1,5 +1,5 @@
 {
-  "exclude": ["(^node_modules/)", "(^package-lock.json$)"],
+  "exclude": ["(^node_modules/)", "(^pnpm-lock.yaml$)"],
   "linters": {
     "chmod": {
       "type": "chmod"

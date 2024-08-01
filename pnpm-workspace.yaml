@@ -1,0 +1,4 @@
+---
+packages:
+  - './npm/eslint-config/'
+  - './npm/prettier-config/'

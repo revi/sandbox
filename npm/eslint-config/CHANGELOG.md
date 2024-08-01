@@ -4,11 +4,20 @@ Pre-`v0.0.6` changelog is not available.
 
 New entry is listed at the top, and old logs may get truncated.
 
-Version bump criteria follows:
+Version bump criteria is as follows:
 
 - major: When the plugin is removed.
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
+
+## v0.0.8
+
+Date: 2024-08-01 (KST)
+
+### Update
+
+- Update `@eslint/js` to `v9.8.0`.
+- Update `eslint` to `v9.8.0`.
 
 ## v0.0.7
 
