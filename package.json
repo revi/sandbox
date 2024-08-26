@@ -23,7 +23,7 @@
     "p:c": "prettier --check",
     "p:w": "prettier --write"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.9.0",
   "prettier": "@revi/prettier-config",
   "author": {
     "name": "Yongmin Hong",
