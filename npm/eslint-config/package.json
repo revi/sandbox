@@ -1,25 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/eslint-config",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "@revi's shared eslint config",
   "main": "eslint.config.js",
   "types": "./types/index.d.ts",
   "dependencies": {
-    "@eslint/js": "9.8.0",
-    "eslint": "9.8.0",
+    "@eslint/js": "9.9.1",
+    "eslint": "9.9.1",
     "eslint-config-prettier": "9.1.0",
-    "globals": "15.8.0"
+    "globals": "15.9.0"
   },
   "devDependencies": {
     "@revi/prettier-config": "../prettier-config",
-    "@types/eslint": "9.6.0",
+    "@types/eslint": "9.6.1",
     "@types/eslint__js": "8.42.3",
     "@types/eslint-config-prettier": "6.11.3",
     "prettier": "3.3.3"
   },
   "peerDependencies": {
-    "eslint": "9.8.0"
+    "eslint": "9.9.1"
   },
   "scripts": {
     "tsc": "tsc eslint.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
@@ -43,7 +43,7 @@
     "url": "https://revi.xyz/",
     "email": "package-admin@revi.dev"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.9.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
