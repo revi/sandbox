@@ -43,7 +43,7 @@
     "url": "https://revi.xyz/",
     "email": "package-admin@revi.dev"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
