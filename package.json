@@ -15,7 +15,7 @@
     "typescript": "5.5.4"
   },
   "optionalDependencies": {
-    "renovate": "38.8.3"
+    "renovate": "38.93.3"
   },
   "scripts": {
     "eslint": "eslint",
