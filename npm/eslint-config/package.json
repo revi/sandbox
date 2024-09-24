@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/eslint-config",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "@revi's shared eslint config",
   "main": "eslint.config.js",
   "types": "./types/index.d.ts",
   "dependencies": {
-    "@eslint/js": "9.11.0",
+    "@eslint/js": "9.11.1",
     "eslint": "catalog:",
     "eslint-config-prettier": "9.1.0",
     "globals": "15.9.0"
@@ -19,7 +19,7 @@
     "prettier": "catalog:"
   },
   "peerDependencies": {
-    "eslint": "9.11.0"
+    "eslint": "9.11.1"
   },
   "scripts": {
     "tsc": "tsc eslint.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
