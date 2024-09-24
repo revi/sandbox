@@ -16,7 +16,7 @@
   "dependencies": {
     "@prettier/plugin-php": "0.22.2",
     "@prettier/plugin-xml": "3.4.1",
-    "prettier": "3.3.3",
+    "prettier": "catalog:",
     "prettier-plugin-sh": "0.14.0",
     "prettier-plugin-toml": "2.0.1"
   },
@@ -36,7 +36,7 @@
   "keywords": [
     "prettier"
   ],
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.11.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
