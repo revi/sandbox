@@ -2,46 +2,47 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/prettier-config",
   "version": "0.1.3",
-  "author": {
-    "name": "revi",
-    "email": "package-admin@revi.dev",
-    "url": "https://revi.xyz"
-  },
   "description": "@revi's prettier configs",
-  "main": "prettier.config.js",
-  "types": "./types/prettier.config.d.ts",
-  "peerDependencies": {
-    "prettier": "3.3.3"
-  },
-  "dependencies": {
-    "@prettier/plugin-php": "0.22.2",
-    "@prettier/plugin-xml": "3.4.1",
-    "prettier": "catalog:",
-    "prettier-plugin-sh": "0.14.0",
-    "prettier-plugin-toml": "2.0.1"
-  },
-  "scripts": {
-    "tsc": "tsc prettier.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
+  "keywords": [
+    "prettier"
+  ],
+  "homepage": "https://revi.kr/prettier-config",
+  "bugs": {
+    "url": "https://revi.xyz/new",
+    "email": "bugs@phab.revi.dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/revi/sandbox.git",
     "directory": "npm/prettier-config"
   },
-  "homepage": "https://revi.kr/prettier-config",
-  "bugs": {
-    "url": "https://revi.xyz/new",
-    "email": "bugs@phab.revi.dev"
+  "funding": "https://github.com/sponsors/revi",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "revi",
+    "email": "package-admin@revi.dev",
+    "url": "https://revi.xyz"
   },
-  "keywords": [
-    "prettier"
-  ],
-  "packageManager": "pnpm@9.11.0",
+  "type": "module",
+  "main": "prettier.config.js",
+  "types": "./types/prettier.config.d.ts",
+  "scripts": {
+    "tsc": "tsc prettier.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
+  },
+  "dependencies": {
+    "@prettier/plugin-php": "0.22.2",
+    "@prettier/plugin-xml": "3.4.1",
+    "prettier": "catalog:",
+    "prettier-plugin-packagejson": "2.5.2",
+    "prettier-plugin-sh": "0.14.0",
+    "prettier-plugin-toml": "2.0.1"
+  },
+  "peerDependencies": {
+    "prettier": "3.3.3"
+  },
+  "packageManager": "pnpm@9.12.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "type": "module",
-  "funding": "https://github.com/sponsors/revi",
-  "license": "Apache-2.0"
+  }
 }

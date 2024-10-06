@@ -15,6 +15,8 @@ const config = {
   singleQuote: true,
   trailingComma: 'all',
   plugins: [
+    // https://github.com/matzkoh/prettier-plugin-packagejson
+    'prettier-plugin-packagejson',
     // https://github.com/prettier/plugin-php
     '@prettier/plugin-php',
     // https://github.com/un-ts/prettier/tree/master/packages/sh

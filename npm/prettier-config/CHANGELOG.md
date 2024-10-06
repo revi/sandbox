@@ -10,6 +10,14 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.2.0
+
+Date: 2024-10-06 (KST)
+
+### New plugin
+
+- New plugin: `prettier-plugin-packagejson` at `v2.5.2`.
+
 ## v0.1.3
 
 Date: 2024-08-01 (KST)

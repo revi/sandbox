@@ -3,6 +3,18 @@
   "name": "@revi/scripts",
   "version": "0.0.1",
   "private": true,
+  "author": {
+    "name": "Yongmin Hong",
+    "email": "package-admin@revi.dev",
+    "url": "https://revi.xyz"
+  },
+  "scripts": {
+    "eslint": "eslint",
+    "lint:renovate": "renovate-config-validator",
+    "p:c": "prettier --check",
+    "p:w": "prettier --write"
+  },
+  "prettier": "@revi/prettier-config",
   "devDependencies": {
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
@@ -17,17 +29,5 @@
   "optionalDependencies": {
     "renovate": "38.8.3"
   },
-  "scripts": {
-    "eslint": "eslint",
-    "lint:renovate": "renovate-config-validator",
-    "p:c": "prettier --check",
-    "p:w": "prettier --write"
-  },
-  "packageManager": "pnpm@9.11.0",
-  "prettier": "@revi/prettier-config",
-  "author": {
-    "name": "Yongmin Hong",
-    "url": "https://revi.xyz",
-    "email": "package-admin@revi.dev"
-  }
+  "packageManager": "pnpm@9.12.0"
 }

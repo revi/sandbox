@@ -3,8 +3,32 @@
   "name": "@revi/eslint-config",
   "version": "0.0.12",
   "description": "@revi's shared eslint config",
+  "keywords": [
+    "eslint"
+  ],
+  "homepage": "https://revi.kr/eslint-config",
+  "bugs": {
+    "url": "https://revi.xyz/new",
+    "email": "bugs@phab.revi.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revi/sandbox.git",
+    "directory": "npm/eslint-config"
+  },
+  "funding": "https://github.com/sponsors/revi",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Yongmin Hong",
+    "email": "package-admin@revi.dev",
+    "url": "https://revi.xyz/"
+  },
+  "type": "module",
   "main": "eslint.config.js",
   "types": "./types/index.d.ts",
+  "scripts": {
+    "tsc": "tsc eslint.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
+  },
   "dependencies": {
     "@eslint/js": "9.11.1",
     "eslint": "catalog:",
@@ -14,40 +38,16 @@
   "devDependencies": {
     "@revi/prettier-config": "../prettier-config",
     "@types/eslint": "9.6.1",
-    "@types/eslint__js": "8.42.3",
     "@types/eslint-config-prettier": "6.11.3",
+    "@types/eslint__js": "8.42.3",
     "prettier": "catalog:"
   },
   "peerDependencies": {
     "eslint": "9.11.1"
   },
-  "scripts": {
-    "tsc": "tsc eslint.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
-  },
-  "funding": "https://github.com/sponsors/revi",
-  "homepage": "https://revi.kr/eslint-config",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/revi/sandbox.git",
-    "directory": "npm/eslint-config"
-  },
-  "bugs": {
-    "url": "https://revi.xyz/new",
-    "email": "bugs@phab.revi.dev"
-  },
-  "keywords": [
-    "eslint"
-  ],
-  "author": {
-    "name": "Yongmin Hong",
-    "url": "https://revi.xyz/",
-    "email": "package-admin@revi.dev"
-  },
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.12.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "type": "module",
-  "license": "Apache-2.0"
+  }
 }
