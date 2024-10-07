@@ -10,6 +10,13 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.0.14
+
+Date: 2024-10-08 (KST)
+
+- Update `@eslint/js` to `v9.12.0`.
+- Update `eslint` to `v9.12.0`.
+
 ## v0.0.13
 
 Date: 2024-10-06 (KST)
