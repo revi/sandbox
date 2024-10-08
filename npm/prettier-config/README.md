@@ -15,6 +15,8 @@ const config = {
   singleQuote: true,
   trailingComma: 'all',
   plugins: [
+    // https://github.com/matzkoh/prettier-plugin-packagejson
+    'prettier-plugin-packagejson',
     // https://github.com/prettier/plugin-php
     '@prettier/plugin-php',
     // https://github.com/un-ts/prettier/tree/master/packages/sh
@@ -35,6 +37,7 @@ const config = {
         '**/*.hujson',
         '.devcontainer.json',
         '.devcontainer/**/devcontainer.json',
+        '**/dprint.json',
         '.vscode/**/*.json',
         '**/jsconfig.json',
         '**/jsconfig.*.json',

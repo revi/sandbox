@@ -37,6 +37,7 @@ const config = {
         '**/*.hujson',
         '.devcontainer.json',
         '.devcontainer/**/devcontainer.json',
+        '**/dprint.json',
         '.vscode/**/*.json',
         '**/jsconfig.json',
         '**/jsconfig.*.json',

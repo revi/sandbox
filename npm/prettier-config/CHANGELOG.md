@@ -10,6 +10,15 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.2.1
+
+Date: 2024-10-08 (KST)
+
+### Update
+
+- Add `dprint.json` as jsonc.
+- Update `README.md`.
+
 ## v0.2.0
 
 Date: 2024-10-06 (KST)
