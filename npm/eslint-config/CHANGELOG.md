@@ -10,6 +10,12 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.0.15
+
+Date: 2024-10-15 (KST)
+
+- Update `globals` to `v15.11.0`.
+
 ## v0.0.14
 
 Date: 2024-10-08 (KST)
