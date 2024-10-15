@@ -18,7 +18,7 @@
   "devDependencies": {
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
-    "@types/node": "20.14.13",
+    "@types/node": "22.6.1",
     "csslint": "1.0.5",
     "eslint": "catalog:",
     "eslint-config-wikimedia": "0.28.2",
