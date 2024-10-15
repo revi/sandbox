@@ -18,16 +18,16 @@
   "devDependencies": {
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
-    "@types/node": "20.14.13",
+    "@types/node": "20.16.11",
     "csslint": "1.0.5",
     "eslint": "catalog:",
     "eslint-config-wikimedia": "0.28.2",
     "jshint": "2.13.6",
     "prettier": "catalog:",
-    "typescript": "5.6.2"
+    "typescript": "5.6.3"
   },
   "optionalDependencies": {
-    "renovate": "38.8.3"
+    "renovate": "38.119.0"
   },
   "packageManager": "pnpm@9.12.1"
 }
