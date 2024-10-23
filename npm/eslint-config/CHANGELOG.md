@@ -1,3 +1,21 @@
+<!--
+SPDX-FileCopyrightText: (C) 2024 Hong Yongmin (https://revi.xyz/) <yewon@revi.email>
+
+SPDX-License-Identifier: Apache-2.0
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
 # `@revi/eslint-config` changelog
 
 Pre-`v0.0.6` changelog is not available.
@@ -9,6 +27,15 @@ Version bump criteria is as follows:
 - major: When the plugin is removed.
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
+
+## v0.0.16
+
+Date: 2024-10-23 (KST)
+
+### Update
+
+- Update `@eslint/js` to `v9.13.0`.
+- Update `eslint` to `v9.13.0`.
 
 ## v0.0.15
 
