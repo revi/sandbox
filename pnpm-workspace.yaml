@@ -4,5 +4,5 @@ packages:
   - './npm/prettier-config/'
 
 catalog:
-  eslint: 9.13.0
+  eslint: 9.14.0
   prettier: 3.3.3
