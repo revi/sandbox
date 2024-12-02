@@ -5,4 +5,4 @@ packages:
 
 catalog:
   eslint: 9.15.0
-  prettier: 3.3.3
+  prettier: 3.4.1
