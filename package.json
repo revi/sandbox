@@ -29,5 +29,5 @@
   "optionalDependencies": {
     "renovate": "39.26.3"
   },
-  "packageManager": "pnpm@9.14.2"
+  "packageManager": "pnpm@9.15.1"
 }

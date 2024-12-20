@@ -40,7 +40,7 @@
   "peerDependencies": {
     "prettier": "3.4.1"
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.15.1",
   "publishConfig": {
     "access": "public",
     "provenance": true
