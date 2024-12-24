@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/prettier-config",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "@revi's prettier configs",
   "keywords": [
     "prettier"
@@ -38,9 +38,9 @@
     "prettier-plugin-toml": "2.0.1"
   },
   "peerDependencies": {
-    "prettier": "3.4.1"
+    "prettier": "3.4.2"
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.15.1",
   "publishConfig": {
     "access": "public",
     "provenance": true
