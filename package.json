@@ -27,7 +27,7 @@
     "typescript": "5.7.2"
   },
   "optionalDependencies": {
-    "renovate": "39.107.0"
+    "renovate": "39.146.2"
   },
   "packageManager": "pnpm@9.15.4"
 }
