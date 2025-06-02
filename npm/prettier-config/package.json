@@ -34,11 +34,11 @@
     "@prettier/plugin-xml": "3.4.1",
     "prettier": "catalog:",
     "prettier-plugin-packagejson": "2.5.3",
-    "prettier-plugin-sh": "0.14.0",
+    "prettier-plugin-sh": "0.17.4",
     "prettier-plugin-toml": "2.0.1"
   },
   "peerDependencies": {
-    "prettier": "3.4.2"
+    "prettier": "3.5.3"
   },
   "packageManager": "pnpm@9.15.4",
   "publishConfig": {
