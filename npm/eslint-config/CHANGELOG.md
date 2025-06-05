@@ -28,6 +28,26 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.0.23
+
+Date: 2025-06-05 (KST)
+
+### Remove
+
+- Remove `@types/eslint__js`. Deprecation message is below. Since this doesn't
+  result in any missing feature, no major version bump is happening.
+
+```lang=txt
+This is a stub types definition. @eslint/js provides its own type definitions, so you do not need this installed.
+```
+
+### Update
+
+- Update `@eslint/js` to `v9.28.0`.
+- Update `eslint` to `v9.28.0`.
+- Update `eslint-config-prettier` to `v10.1.5`.
+- Update `globals` to `v16.2.0`.
+
 ## v0.0.22
 
 Date: 2025-01-30 (KST)
