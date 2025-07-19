@@ -30,11 +30,11 @@
     "tsc": "tsc prettier.config.js --declaration --allowJs --emitDeclarationOnly --esModuleInterop --outdir types"
   },
   "dependencies": {
-    "@prettier/plugin-php": "0.22.4",
+    "@prettier/plugin-php": "0.24.0",
     "@prettier/plugin-xml": "3.4.2",
     "prettier": "catalog:",
     "prettier-plugin-packagejson": "2.5.18",
-    "prettier-plugin-sh": "0.17.4",
+    "prettier-plugin-sh": "0.18.0",
     "prettier-plugin-toml": "2.0.6"
   },
   "peerDependencies": {
