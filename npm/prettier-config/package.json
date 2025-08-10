@@ -33,7 +33,7 @@
     "@prettier/plugin-php": "0.22.4",
     "@prettier/plugin-xml": "3.4.2",
     "prettier": "catalog:",
-    "prettier-plugin-packagejson": "2.5.18",
+    "prettier-plugin-packagejson": "2.5.19",
     "prettier-plugin-sh": "0.17.4",
     "prettier-plugin-toml": "2.0.6"
   },
