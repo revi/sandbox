@@ -24,7 +24,7 @@
     "eslint-config-wikimedia": "0.31.0",
     "jshint": "2.13.6",
     "prettier": "catalog:",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "optionalDependencies": {
     "renovate": "39.107.0"
