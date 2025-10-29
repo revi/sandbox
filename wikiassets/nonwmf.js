@@ -55,7 +55,7 @@ mw.loader.load(
 
 // Display lists aka StewardLinks
 mw.loader.load(
-  '//meta.wikimedia.org/w/index.php?oldid=20169009&action=raw&ctype=text/javascript',
+  '//meta.wikimedia.org/w/index.php?oldid=22884516&action=raw&ctype=text/javascript',
 );
 
 /**

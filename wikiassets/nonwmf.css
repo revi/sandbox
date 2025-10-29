@@ -31,7 +31,7 @@
 }
 
 /** No MediaViewer button on File: namespace pages */
-.mw-mmv-filepage-buttons {
+.mw-mmv-view-expanded {
   display: none;
 }
 
