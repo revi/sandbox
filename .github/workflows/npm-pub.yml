@@ -17,7 +17,7 @@ jobs:
     if: contains(github.ref_name, 'eslint-config@')
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Install pnpm
         uses: pnpm/action-setup@v4
       # Setup .npmrc file to publish to npm
@@ -45,7 +45,7 @@ jobs:
     if: contains(github.ref_name, 'prettier-config@')
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Install pnpm
         uses: pnpm/action-setup@v4
       # Setup .npmrc file to publish to npm
