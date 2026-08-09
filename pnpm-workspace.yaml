@@ -3,11 +3,12 @@ packages:
   - ./npm/eslint-config/
   - ./npm/prettier-config/
 catalog:
-  eslint: 9.39.0
-  prettier: 3.6.2
-onlyBuiltDependencies:
-  - better-sqlite3
-  - core-js-pure
-  - dtrace-provider
-  - protobufjs
-  - re2
+  eslint: 9.39.5
+  prettier: 3.9.6
+# Packages allowed to run install/lifecycle scripts (pnpm 11: replaces onlyBuiltDependencies).
+allowBuilds:
+  better-sqlite3: true
+  core-js-pure: true
+  dtrace-provider: true
+  protobufjs: true
+  re2: true

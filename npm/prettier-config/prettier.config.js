@@ -1,4 +1,9 @@
 // @ts-check
+import phpPlugin from '@prettier/plugin-php/standalone';
+import xmlPlugin from '@prettier/plugin-xml';
+import * as shPlugin from 'prettier-plugin-sh';
+import tomlPlugin from 'prettier-plugin-toml';
+
 /**
  * @file revi's prettier config preset
  * @see https://prettier.io/docs/en/configuration.html
@@ -15,16 +20,14 @@ const config = {
   singleQuote: true,
   trailingComma: 'all',
   plugins: [
-    // https://github.com/matzkoh/prettier-plugin-packagejson
-    'prettier-plugin-packagejson',
     // https://github.com/prettier/plugin-php
-    '@prettier/plugin-php',
+    phpPlugin,
     // https://github.com/un-ts/prettier/tree/master/packages/sh
-    'prettier-plugin-sh',
+    shPlugin,
     // https://github.com/bd82/toml-tools/tree/master/packages/prettier-plugin-toml
-    'prettier-plugin-toml',
+    tomlPlugin,
     // https://github.com/prettier/plugin-xml
-    '@prettier/plugin-xml',
+    xmlPlugin,
   ],
   overrides: [
     // Sort by parser alphabet.

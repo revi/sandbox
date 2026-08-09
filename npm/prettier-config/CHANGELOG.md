@@ -10,6 +10,24 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.2.8
+
+Date: 2026-08-22 (KST)
+
+### Remove
+
+- `prettier-config-packagejson` is temporarily removed. This will bump to `v1.0.0` when it is finalized.
+
+### Fix
+
+- Resolve Prettier plugins from the config package instead of the consumer's current working directory.
+
+### Update
+
+- Update `prettier` to `v3.9.6`.
+- Update `@prettier/plugin-php` to `v0.25.0`.
+- Update `prettier-plugin-sh` to `v0.19.0`.
+
 ## v0.2.7
 
 Date: 2025-08-26 (KST)
