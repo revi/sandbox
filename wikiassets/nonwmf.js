@@ -1,6 +1,6 @@
 // enwiki purgetab
 mw.loader.load(
-  '//en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-purgetab.js&oldid=951989513&action=raw&ctype=text/javascript',
+  '//en.wikipedia.org/w/index.php?title=MediaWiki:Gadget-purgetab.js&oldid=1105285063&action=raw&ctype=text/javascript',
 );
 
 /* Automate purge confirmation dialog */

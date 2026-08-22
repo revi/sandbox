@@ -8,10 +8,10 @@
   display: none;
 }
 
-/* I won't logout unless in preferences which is typed manually */
-#pt-logout {
-  display: none;
-}
+/* I won't logout unless in preferences which must be manually typed into search bar.
+   This prevents a fat finger problems when trying to touch "Contribs" on mobile.
+ */
+#pt-logout,
 #pt-preferences {
   display: none;
 }
@@ -54,14 +54,31 @@
   font-size: 9pt;
 }
 
+/* dots after section name, per Korean Grammar rules.
+  문화체육관광부 고시 제2017-12호(2017. 3. 28.) 부록 1.4.
+  '장, 절, 항 등을 표시하는 문자나 숫자 다음에 쓴다.' */
+.tocnumber::after {
+  content: '.';
+}
+
 /* Quick hack to force the Search tab on [[Special:Contribs]] open.
-  Credit: Volker E. (WMF) & Stwalkerster
-  [[Special:Permalink/19431311#Reverting the new "collapsed search interface" on Special:Contribs|Tech]] */
-.mw-special-Contributions .oo-ui-fieldsetLayout-group.mw-collapsible-content {
+   Credit: Volker E. (WMF) & Stwalkerster
+   [[Special:Permalink/19431311#Reverting the new "collapsed search interface" on Special:Contribs|Tech]]
+   Disabled 2025-12-15, either WMF messed up with css element or browsers started treating this differently, removing contribs search bar entirely, ¯\_(ツ)_/¯
+
+.mw-special-Contributions .oo-ui-fieldsetLayout-group.mw-collapsible-content { display: block !important; }
+.mw-special-Contributions .oo-ui-fieldsetLayout-header { display: none !important; }
+*/
+
+/* Abuselog */
+.mw-special-AbuseLog .oo-ui-fieldsetLayout-group.mw-collapsible-content {
   display: block !important;
 }
-.mw-special-Contributions .oo-ui-fieldsetLayout-header {
-  display: none !important;
+/* .mw-special-AbuseLog .oo-ui-fieldsetLayout-header { display: none !important; } */
+
+/* Hide "Permanent" part of watch this page */
+#mw-editpage-watchlist-expiry {
+  display: none;
 }
 
 /* Colorize diff size
@@ -73,14 +90,31 @@
   color: red;
 }
 
-/* Get rid of 'partial' block. Uselessness 100% guaranteed.
-  TODO: Fix this (MW update broke this) */
-.mw-block-restriction {
+/* Get rid of temporary watchlist stuff
+  Credit: AntiCompositeNumber at
+  [[Special:Permalink/23537095#Hide partial block & temporary watchlist stuff]]) */
+.mw-WatchlistExpiryWidgetwatchlist-dropdown-label,
+.mw-watchexpiry {
   display: none;
-} /* Kills partial block target list */
-.mw-block-editing-restriction {
+}
+
+/* Get rid of "Partial block" bullshit
+   My position explained at [[User:Revi C.|my userpage]]
+ */
+/* TODO: Remove "Block Type" header
+   https://r2.revicdn.net/screenshots/Screenshot%202024-11-05%20at%2021-10-38%20Block%20user%20-%20EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC.png
+ */
+.mw-block-editing-restriction.oo-ui-fieldLayout,
+.mw-block-partial-restriction.oo-ui-fieldLayout {
   display: none;
-} /* Kill Partial switch */
-.mw-block-page-restrictions {
-  display: none;
-} /* Kill radio box */
+}
+
+/* shamelessly copied from [[wikia:wikibot:Mediawiki:Wikia.css]] */
+.skin-apioutput {
+  background: #dcddde;
+}
+
+.apihelp-parameters dd {
+  min-height: 1.5em;
+}
+/* End copied portion */
