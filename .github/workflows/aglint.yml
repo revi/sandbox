@@ -1,0 +1,29 @@
+---
+name: Run aglint
+on:
+  push:
+    paths:
+      - 'adblock/list.txt'
+  pull_request:
+    paths:
+      - 'adblock/list.txt'
+  workflow_dispatch:
+
+jobs:
+  yaml-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install deps
+        run: pnpm install
+      - name: aglint
+        run: pnpm aglint

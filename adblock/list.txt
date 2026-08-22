@@ -1,4 +1,4 @@
-[Adblock Plus 2.0]
+! [Adblock Plus 2.0]
 ! Homepage: https://revi.wiki/wiki/핸드북:Setup/uBlock_Origin
 ! License: https://github.com/revi/sandbox/blob/master/LICENSE
 ! Title: revi's custom rules
@@ -7,7 +7,7 @@
 ! Expires: 4 days
 ! Version: 20260822-01
 
-@@||intake-analytics.wikimedia.org^$important
+@@||intake-analytics.wikimedia.org^
 ! Disabled 3 below for now. 20260822
 ! ||namu.live^
 ! ||arca.live^
