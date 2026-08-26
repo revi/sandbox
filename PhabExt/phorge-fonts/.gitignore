@@ -1,0 +1,4 @@
+# Install artifacts, downloaded by bin/fetch-fonts into the installed copy.
+# They land here only if fetch-fonts is pointed at this directory.
+/extension/webroot/rsrc/font/
+/licenses/

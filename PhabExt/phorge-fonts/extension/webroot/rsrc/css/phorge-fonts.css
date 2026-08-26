@@ -1,0 +1,279 @@
+/**
+ * @provides phorge-fonts-css
+ */
+
+/* Font files are fetched by `bin/fetch-fonts` and served through Celerity, so
+   these URIs are rewritten to /res/phorgefonts/<hash>/... at map time. They
+   must stay same-origin: Phorge's Content-Security-Policy has no `font-src`
+   directive, so fonts fall back to `default-src`, which is `'self'` plus the
+   configured `security.alternate-file-domain`. */
+
+/* -(  IBM Plex Sans -- Latin, Greek, Cyrillic  )---------------------------- */
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(/rsrc/font/plex-sans/IBMPlexSans-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(/rsrc/font/plex-sans/IBMPlexSans-Italic.woff2) format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(/rsrc/font/plex-sans/IBMPlexSans-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(/rsrc/font/plex-sans/IBMPlexSans-BoldItalic.woff2) format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -(  IBM Plex Sans KR -- Hangul  )----------------------------------------- */
+
+/* IBM Plex Sans KR also carries Latin, but IBM Plex Sans is listed ahead of it
+   in the stack: the two share a design, IBM Plex Sans is a seventh of the
+   size, and only it has real italics. In practice the 430KB Korean face is
+   only downloaded once a page actually contains Hangul. */
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url(/rsrc/font/plex-sans-kr/IBMPlexSansKR-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url(/rsrc/font/plex-sans-kr/IBMPlexSansKR-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* The Standard Korean Language Dictionary defines 이탤릭체 as a 서양 letterform,
+   and Korean families are drawn accordingly: Malgun Gothic has Bold, Regular
+   and Semilight but no Italic, and IBM Plex Sans KR ships no italics either.
+   A browser asked for italic Hangul therefore synthesizes an oblique, which
+   is a slant applied to a face never designed to take one. Declaring the
+   upright files *as* the italic faces gives the matcher a real face to pick
+   and suppresses that. See https://korean.stackexchange.com/q/5399 . */
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url(/rsrc/font/plex-sans-kr/IBMPlexSansKR-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  src: url(/rsrc/font/plex-sans-kr/IBMPlexSansKR-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -(  IBM Plex Mono  )------------------------------------------------------ */
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(/rsrc/font/plex-mono/IBMPlexMono-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(/rsrc/font/plex-mono/IBMPlexMono-Italic.woff2) format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(/rsrc/font/plex-mono/IBMPlexMono-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(/rsrc/font/plex-mono/IBMPlexMono-BoldItalic.woff2) format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -(  Nanum Gothic Coding -- Hangul, monospaced  )-------------------------- */
+
+/* IBM Plex Mono has no Hangul. Nanum Gothic Coding is the Korean monospace
+   companion: its Hangul is exactly two Latin advances wide, so code and log
+   output stay in column. Only the `korean` subset is fetched; Latin never
+   reaches this family because IBM Plex Mono precedes it in the stack. */
+
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  src: url(/rsrc/font/nanum-gothic-coding/nanum-gothic-coding-korean-400-normal.woff2)
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  src: url(/rsrc/font/nanum-gothic-coding/nanum-gothic-coding-korean-700-normal.woff2)
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Upright files declared as the italic faces, for the same reason as
+   IBM Plex Sans KR above: Hangul is never italicised. */
+
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  src: url(/rsrc/font/nanum-gothic-coding/nanum-gothic-coding-korean-400-normal.woff2)
+    format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  src: url(/rsrc/font/nanum-gothic-coding/nanum-gothic-coding-korean-700-normal.woff2)
+    format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -(  Font stacks  )-------------------------------------------------------- */
+
+:root {
+  --phorge-fonts-sans: 'IBM Plex Sans', 'IBM Plex Sans KR', 'Segoe UI',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+
+  /* IBM Plex Mono covers Latin only. Hangul in code falls through to Nanum
+     Gothic Coding, which is monospaced; IBM Plex Sans KR sits behind it as a
+     proportional last resort for the CJK that Nanum does not carry. */
+  --phorge-fonts-mono: 'IBM Plex Mono', 'Nanum Gothic Coding',
+    'IBM Plex Sans KR', 'Menlo', 'Consolas', 'Monaco', monospace;
+}
+
+/* -(  Sans-serif everywhere  )---------------------------------------------- */
+
+/* Phorge hardcodes the Celerity variables "fontfamily" and "basefont" into a
+   few hundred rules, most of them at class specificity, and those variables
+   can only be replaced by a `CelerityPostprocessor` -- which is a per-viewer
+   Accessibility setting and would conflict with Dark Mode. Sweeping with
+   `!important` is what is left. Pseudo-elements are not matched by `body *`,
+   so the FontAwesome icon rules (all `::before` / `::after`) are unaffected.
+
+   Do not write those variable names in Celerity's own `{`+`$name}` syntax
+   anywhere in this file, comments included: substitution runs before comments
+   are stripped, and an unknown name raises an exception at map time. */
+
+body,
+body * {
+  font-family: var(--phorge-fonts-sans) !important;
+}
+
+/* -(  Monospace  )---------------------------------------------------------- */
+
+/* Class specificity beats `body *` among `!important` declarations, so these
+   win. Descendants use `inherit` rather than naming the stack again: that
+   keeps the per-user "Monospaced Font" setting -- an inline `<style>` emitted
+   after our stylesheet -- authoritative over the whole block instead of only
+   its outermost element. */
+
+.PhabricatorMonospaced,
+.remarkup-code,
+.remarkup-monospaced,
+.diviner-monospace,
+.invisible-special,
+.aphront-table-view td.mono,
+.aphront-table-view td.n,
+.aphront-table-view td.prewrap,
+.aphront-table-view td.threads,
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: var(--phorge-fonts-mono) !important;
+}
+
+.PhabricatorMonospaced *,
+.remarkup-code *,
+.remarkup-monospaced *,
+.diviner-monospace *,
+.aphront-table-view td.mono *,
+.aphront-table-view td.n *,
+.aphront-table-view td.prewrap *,
+.aphront-table-view td.threads *,
+code *,
+kbd *,
+pre *,
+samp *,
+tt * {
+  font-family: inherit !important;
+}
+
+/* -(  Blockquotes  )-------------------------------------------------------- */
+
+/* Remarkup `>` quotes ship italic (`.phabricator-remarkup blockquote` in
+   `remarkup.css`). Set them upright, because italic-as-quotation is an English
+   convention that Korean does not share: 한글 맞춤법 and 문장 부호 해설 assign
+   quotation to 큰따옴표, and emphasis to 작은따옴표, 드러냄표 or 밑줄. Italics
+   have no assigned role at all, so slanted Hangul reads as a special effect
+   rather than as a quote -- and here it would not even be a visible one: the
+   Korean faces above are upright by design, so the slant never renders. The
+   left border and background carry the quote instead.
+
+   See https://korean.stackexchange.com/q/5399 for the sourced discussion. */
+
+.phabricator-remarkup blockquote {
+  font-style: normal !important;
+}
+
+/* Core flips `em` to upright inside a quote, because the surrounding text is
+   italic there. With the quote body upright, emphasis has to be italic again.
+   The reply header (`div.remarkup-reply-head em`) is more specific and keeps
+   its own italic, which is already the behaviour we want. */
+
+.phabricator-remarkup blockquote em {
+  font-style: italic !important;
+}
+
+/* -(  Icons  )-------------------------------------------------------------- */
+
+/* Defensive: `body *` cannot match a pseudo-element, but an icon that ever
+   grows a non-pseudo rule should still render as an icon. */
+
+.phui-font-fa:before,
+.phui-font-fa::before {
+  font-family: FontAwesome !important;
+}

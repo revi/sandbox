@@ -1,0 +1,100 @@
+#!/bin/sh
+# Copyright (C) 2026 Hong Yongmin <https://revi.xyz/>
+# SPDX-License-Identifier: Apache-2.0
+#
+# Downloads the woff2 files this extension serves, into an installed copy of
+# the extension. Usually invoked by `bin/install`; run it directly to refresh
+# the fonts in place:
+#
+#   sh bin/fetch-fonts /var/www/phorge/phorge/src/extensions/phorge-fonts
+#
+# Phorge's Content-Security-Policy emits no `font-src` directive, so fonts fall
+# back to `default-src`, which is `'self'` plus `security.alternate-file-domain`.
+# A stylesheet pointing at cdn.jsdelivr.net would therefore be blocked in the
+# browser: the fonts have to be served from the Phorge install itself.
+#
+# Run `bin/celerity map` from the Phorge root afterwards, then restart.
+
+set -eu
+
+PLEX_SANS_VERSION='1.1.0'
+PLEX_SANS_KR_VERSION='1.1.0'
+PLEX_MONO_VERSION='2.5.0'
+NANUM_GOTHIC_CODING_VERSION='5.3.0'
+
+CDN='https://cdn.jsdelivr.net/npm/@ibm'
+FONTSOURCE='https://cdn.jsdelivr.net/npm/@fontsource'
+
+if [ "$#" -ne 1 ]; then
+  echo "usage: $0 <installed-extension-directory>" >&2
+  exit 1
+fi
+
+ROOT=$(CDPATH='' cd -- "$1" && pwd)
+FONT_ROOT="$ROOT/webroot/rsrc/font"
+LICENSE_ROOT="$ROOT/licenses"
+
+if [ ! -d "$ROOT/webroot/rsrc/css" ]; then
+  echo "fetch-fonts: '$ROOT' does not look like an installed copy of this" >&2
+  echo "extension (no webroot/rsrc/css). Run bin/install first." >&2
+  exit 1
+fi
+
+if ! command -v curl >/dev/null 2>&1; then
+  echo 'fetch-fonts: curl is required.' >&2
+  exit 1
+fi
+
+fetch() {
+  # $1: source URI, $2: destination path
+  echo "  $2"
+  curl --fail --silent --show-error --location --output "$2" "$1"
+}
+
+mkdir -p \
+  "$FONT_ROOT/plex-sans" \
+  "$FONT_ROOT/plex-sans-kr" \
+  "$FONT_ROOT/plex-mono" \
+  "$FONT_ROOT/nanum-gothic-coding" \
+  "$LICENSE_ROOT"
+
+echo "IBM Plex Sans $PLEX_SANS_VERSION"
+SANS="$CDN/plex-sans@$PLEX_SANS_VERSION"
+for STYLE in Regular Italic Bold BoldItalic; do
+  fetch \
+    "$SANS/fonts/complete/woff2/IBMPlexSans-$STYLE.woff2" \
+    "$FONT_ROOT/plex-sans/IBMPlexSans-$STYLE.woff2"
+done
+fetch "$SANS/LICENSE.txt" "$LICENSE_ROOT/IBMPlexSans-LICENSE.txt"
+
+# IBM Plex Sans KR ships no italics -- the stylesheet declares the upright
+# files as the italic faces on purpose. Only the "hinted" tree has woff2.
+echo "IBM Plex Sans KR $PLEX_SANS_KR_VERSION"
+SANS_KR="$CDN/plex-sans-kr@$PLEX_SANS_KR_VERSION"
+for STYLE in Regular Bold; do
+  fetch \
+    "$SANS_KR/fonts/complete/woff2/hinted/IBMPlexSansKR-$STYLE.woff2" \
+    "$FONT_ROOT/plex-sans-kr/IBMPlexSansKR-$STYLE.woff2"
+done
+fetch "$SANS_KR/LICENSE.txt" "$LICENSE_ROOT/IBMPlexSansKR-LICENSE.txt"
+
+echo "IBM Plex Mono $PLEX_MONO_VERSION"
+MONO="$CDN/plex-mono@$PLEX_MONO_VERSION"
+for STYLE in Regular Italic Bold BoldItalic; do
+  fetch \
+    "$MONO/fonts/complete/woff2/IBMPlexMono-$STYLE.woff2" \
+    "$FONT_ROOT/plex-mono/IBMPlexMono-$STYLE.woff2"
+done
+fetch "$MONO/LICENSE.txt" "$LICENSE_ROOT/IBMPlexMono-LICENSE.txt"
+
+# Korean monospace. Only the `korean` subset is needed: Latin in code is served
+# by IBM Plex Mono, which precedes this family in the stack. No italics.
+echo "Nanum Gothic Coding $NANUM_GOTHIC_CODING_VERSION"
+NANUM="$FONTSOURCE/nanum-gothic-coding@$NANUM_GOTHIC_CODING_VERSION"
+for WEIGHT in 400 700; do
+  FILE="nanum-gothic-coding-korean-$WEIGHT-normal.woff2"
+  fetch \
+    "$NANUM/files/$FILE" \
+    "$FONT_ROOT/nanum-gothic-coding/$FILE"
+done
+fetch "$NANUM/LICENSE" "$LICENSE_ROOT/NanumGothicCoding-LICENSE.txt"
