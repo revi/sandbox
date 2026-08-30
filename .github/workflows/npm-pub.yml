@@ -34,7 +34,6 @@ jobs:
         working-directory: './npm/eslint-config'
         env:
           NPM_CONFIG_PROVENANCE: true
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   prettier-config:
     name: 'Publish prettier-config to npm'
@@ -62,4 +61,3 @@ jobs:
         working-directory: './npm/prettier-config'
         env:
           NPM_CONFIG_PROVENANCE: true
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
