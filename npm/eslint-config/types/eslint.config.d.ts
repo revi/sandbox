@@ -1,21 +1,3 @@
-/*
- * SPDX-FileCopyrightText: (C) 2024 Hong Yongmin (https://revi.xyz/) <yewon@revi.email>
- *
- * SPDX-License-Identifier: Apache-2.0
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 declare const _default: (
   | {
       readonly rules: Readonly<import('eslint').Linter.RulesRecord>;
@@ -36,6 +18,10 @@ declare const _default: (
           readonly AbstractRange: false;
           readonly Accelerometer: false;
           readonly addEventListener: false;
+          readonly ai: false;
+          readonly AI: false;
+          readonly AICreateMonitor: false;
+          readonly AITextSession: false;
           readonly alert: false;
           readonly AnalyserNode: false;
           readonly Animation: false;
@@ -57,19 +43,19 @@ declare const _default: (
           readonly AudioNode: false;
           readonly AudioParam: false;
           readonly AudioParamMap: false;
+          readonly AudioPlaybackStats: false;
           readonly AudioProcessingEvent: false;
           readonly AudioScheduledSourceNode: false;
           readonly AudioSinkInfo: false;
           readonly AudioWorklet: false;
-          readonly AudioWorkletGlobalScope: false;
           readonly AudioWorkletNode: false;
-          readonly AudioWorkletProcessor: false;
           readonly AuthenticatorAssertionResponse: false;
           readonly AuthenticatorAttestationResponse: false;
           readonly AuthenticatorResponse: false;
           readonly BackgroundFetchManager: false;
           readonly BackgroundFetchRecord: false;
           readonly BackgroundFetchRegistration: false;
+          readonly BarcodeDetector: false;
           readonly BarProp: false;
           readonly BaseAudioContext: false;
           readonly BatteryManager: false;
@@ -105,18 +91,21 @@ declare const _default: (
           readonly CDATASection: false;
           readonly ChannelMergerNode: false;
           readonly ChannelSplitterNode: false;
+          readonly ChapterInformation: false;
           readonly CharacterBoundsUpdateEvent: false;
           readonly CharacterData: false;
           readonly clearInterval: false;
           readonly clearTimeout: false;
           readonly clientInformation: false;
           readonly Clipboard: false;
+          readonly ClipboardChangeEvent: false;
           readonly ClipboardEvent: false;
           readonly ClipboardItem: false;
           readonly close: false;
           readonly closed: false;
           readonly CloseEvent: false;
           readonly CloseWatcher: false;
+          readonly CommandEvent: false;
           readonly Comment: false;
           readonly CompositionEvent: false;
           readonly CompressionStream: false;
@@ -131,7 +120,10 @@ declare const _default: (
           readonly CookieStore: false;
           readonly CookieStoreManager: false;
           readonly CountQueuingStrategy: false;
+          readonly crashReport: false;
+          readonly CrashReportContext: false;
           readonly createImageBitmap: false;
+          readonly CreateMonitor: false;
           readonly Credential: false;
           readonly credentialless: false;
           readonly CredentialsContainer: false;
@@ -140,14 +132,19 @@ declare const _default: (
           readonly crypto: false;
           readonly Crypto: false;
           readonly CryptoKey: false;
+          readonly CSPViolationReportBody: false;
           readonly CSS: false;
           readonly CSSAnimation: false;
           readonly CSSConditionRule: false;
           readonly CSSContainerRule: false;
           readonly CSSCounterStyleRule: false;
+          readonly CSSFontFaceDescriptors: false;
           readonly CSSFontFaceRule: false;
           readonly CSSFontFeatureValuesRule: false;
           readonly CSSFontPaletteValuesRule: false;
+          readonly CSSFunctionDeclarations: false;
+          readonly CSSFunctionDescriptors: false;
+          readonly CSSFunctionRule: false;
           readonly CSSGroupingRule: false;
           readonly CSSImageValue: false;
           readonly CSSImportRule: false;
@@ -156,6 +153,7 @@ declare const _default: (
           readonly CSSKeywordValue: false;
           readonly CSSLayerBlockRule: false;
           readonly CSSLayerStatementRule: false;
+          readonly CSSMarginRule: false;
           readonly CSSMathClamp: false;
           readonly CSSMathInvert: false;
           readonly CSSMathMax: false;
@@ -167,14 +165,17 @@ declare const _default: (
           readonly CSSMatrixComponent: false;
           readonly CSSMediaRule: false;
           readonly CSSNamespaceRule: false;
+          readonly CSSNestedDeclarations: false;
           readonly CSSNumericArray: false;
           readonly CSSNumericValue: false;
+          readonly CSSPageDescriptors: false;
           readonly CSSPageRule: false;
           readonly CSSPerspective: false;
           readonly CSSPositionTryDescriptors: false;
           readonly CSSPositionTryRule: false;
           readonly CSSPositionValue: false;
           readonly CSSPropertyRule: false;
+          readonly CSSPseudoElement: false;
           readonly CSSRotate: false;
           readonly CSSRule: false;
           readonly CSSRuleList: false;
@@ -185,6 +186,7 @@ declare const _default: (
           readonly CSSSkewY: false;
           readonly CSSStartingStyleRule: false;
           readonly CSSStyleDeclaration: false;
+          readonly CSSStyleProperties: false;
           readonly CSSStyleRule: false;
           readonly CSSStyleSheet: false;
           readonly CSSStyleValue: false;
@@ -197,8 +199,6 @@ declare const _default: (
           readonly CSSUnparsedValue: false;
           readonly CSSVariableReferenceValue: false;
           readonly CSSViewTransitionRule: false;
-          readonly currentFrame: false;
-          readonly currentTime: false;
           readonly CustomElementRegistry: false;
           readonly customElements: false;
           readonly CustomEvent: false;
@@ -214,6 +214,8 @@ declare const _default: (
           readonly DeviceMotionEventRotationRate: false;
           readonly DeviceOrientationEvent: false;
           readonly devicePixelRatio: false;
+          readonly DevicePosture: false;
+          readonly DigitalCredential: false;
           readonly dispatchEvent: false;
           readonly document: false;
           readonly Document: false;
@@ -273,6 +275,7 @@ declare const _default: (
           readonly FileSystemFileEntry: false;
           readonly FileSystemFileHandle: false;
           readonly FileSystemHandle: false;
+          readonly FileSystemObserver: false;
           readonly FileSystemWritableFileStream: false;
           readonly find: false;
           readonly focus: false;
@@ -380,6 +383,7 @@ declare const _default: (
           readonly HTMLFormElement: false;
           readonly HTMLFrameElement: false;
           readonly HTMLFrameSetElement: false;
+          readonly HTMLGeolocationElement: false;
           readonly HTMLHeadElement: false;
           readonly HTMLHeadingElement: false;
           readonly HTMLHRElement: false;
@@ -411,6 +415,7 @@ declare const _default: (
           readonly HTMLProgressElement: false;
           readonly HTMLQuoteElement: false;
           readonly HTMLScriptElement: false;
+          readonly HTMLSelectedContentElement: false;
           readonly HTMLSelectElement: false;
           readonly HTMLSlotElement: false;
           readonly HTMLSourceElement: false;
@@ -429,6 +434,7 @@ declare const _default: (
           readonly HTMLTrackElement: false;
           readonly HTMLUListElement: false;
           readonly HTMLUnknownElement: false;
+          readonly HTMLUserMediaElement: false;
           readonly HTMLVideoElement: false;
           readonly IDBCursor: false;
           readonly IDBCursorWithValue: false;
@@ -438,6 +444,7 @@ declare const _default: (
           readonly IDBKeyRange: false;
           readonly IDBObjectStore: false;
           readonly IDBOpenDBRequest: false;
+          readonly IDBRecord: false;
           readonly IDBRequest: false;
           readonly IDBTransaction: false;
           readonly IDBVersionChangeEvent: false;
@@ -462,14 +469,18 @@ declare const _default: (
           readonly InputDeviceCapabilities: false;
           readonly InputDeviceInfo: false;
           readonly InputEvent: false;
+          readonly IntegrityViolationReportBody: false;
+          readonly InteractionContentfulPaint: false;
+          readonly InterestEvent: false;
           readonly IntersectionObserver: false;
           readonly IntersectionObserverEntry: false;
           readonly isSecureContext: false;
-          readonly Iterator: false;
           readonly Keyboard: false;
           readonly KeyboardEvent: false;
           readonly KeyboardLayoutMap: false;
           readonly KeyframeEffect: false;
+          readonly LanguageDetector: false;
+          readonly LanguageModel: false;
           readonly LargestContentfulPaint: false;
           readonly LaunchParams: false;
           readonly launchQueue: false;
@@ -534,6 +545,7 @@ declare const _default: (
           readonly MimeType: false;
           readonly MimeTypeArray: false;
           readonly model: false;
+          readonly ModelContext: false;
           readonly ModelGenericSession: false;
           readonly ModelManager: false;
           readonly MouseEvent: false;
@@ -551,6 +563,7 @@ declare const _default: (
           readonly NavigationCurrentEntryChangeEvent: false;
           readonly NavigationDestination: false;
           readonly NavigationHistoryEntry: false;
+          readonly NavigationPrecommitController: false;
           readonly NavigationPreloadManager: false;
           readonly NavigationTransition: false;
           readonly navigator: false;
@@ -567,6 +580,7 @@ declare const _default: (
           readonly NotifyPaintEvent: false;
           readonly NotRestoredReasonDetails: false;
           readonly NotRestoredReasons: false;
+          readonly Observable: false;
           readonly OfflineAudioCompletionEvent: false;
           readonly OfflineAudioContext: false;
           readonly offscreenBuffering: false;
@@ -594,6 +608,7 @@ declare const _default: (
           readonly onchange: true;
           readonly onclick: true;
           readonly onclose: true;
+          readonly oncommand: true;
           readonly oncontentvisibilityautostatechange: true;
           readonly oncontextlost: true;
           readonly oncontextmenu: true;
@@ -670,6 +685,8 @@ declare const _default: (
           readonly onresize: true;
           readonly onscroll: true;
           readonly onscrollend: true;
+          readonly onscrollsnapchange: true;
+          readonly onscrollsnapchanging: true;
           readonly onsearch: true;
           readonly onsecuritypolicyviolation: true;
           readonly onseeked: true;
@@ -698,6 +715,7 @@ declare const _default: (
           readonly Option: false;
           readonly OrientationSensor: false;
           readonly origin: false;
+          readonly Origin: false;
           readonly originAgentCluster: false;
           readonly OscillatorNode: false;
           readonly OTPCredential: false;
@@ -727,6 +745,7 @@ declare const _default: (
           readonly PerformanceLongAnimationFrameTiming: false;
           readonly PerformanceLongTaskTiming: false;
           readonly PerformanceMark: false;
+          readonly PerformanceMarkConditional: false;
           readonly PerformanceMeasure: false;
           readonly PerformanceNavigation: false;
           readonly PerformanceNavigationTiming: false;
@@ -736,10 +755,13 @@ declare const _default: (
           readonly PerformanceResourceTiming: false;
           readonly PerformanceScriptTiming: false;
           readonly PerformanceServerTiming: false;
+          readonly PerformanceSoftNavigation: false;
           readonly PerformanceTiming: false;
+          readonly PerformanceTimingConfidence: false;
           readonly PeriodicSyncManager: false;
           readonly PeriodicWave: false;
           readonly Permissions: false;
+          readonly PermissionsPolicy: false;
           readonly PermissionStatus: false;
           readonly PERSISTENT: false;
           readonly personalbar: false;
@@ -773,6 +795,7 @@ declare const _default: (
           readonly PushSubscriptionOptions: false;
           readonly queryLocalFonts: false;
           readonly queueMicrotask: false;
+          readonly QuotaExceededError: false;
           readonly RadioNodeList: false;
           readonly Range: false;
           readonly ReadableByteStreamController: false;
@@ -781,10 +804,10 @@ declare const _default: (
           readonly ReadableStreamBYOBRequest: false;
           readonly ReadableStreamDefaultController: false;
           readonly ReadableStreamDefaultReader: false;
-          readonly registerProcessor: false;
           readonly RelativeOrientationSensor: false;
           readonly RemotePlayback: false;
           readonly removeEventListener: false;
+          readonly ReportBody: false;
           readonly reportError: false;
           readonly ReportingObserver: false;
           readonly Request: false;
@@ -796,6 +819,7 @@ declare const _default: (
           readonly ResizeObserverSize: false;
           readonly resizeTo: false;
           readonly Response: false;
+          readonly RestrictionTarget: false;
           readonly RTCCertificate: false;
           readonly RTCDataChannel: false;
           readonly RTCDataChannelEvent: false;
@@ -807,6 +831,7 @@ declare const _default: (
           readonly RTCError: false;
           readonly RTCErrorEvent: false;
           readonly RTCIceCandidate: false;
+          readonly RTCIceCandidatePair: false;
           readonly RTCIceTransport: false;
           readonly RTCPeerConnection: false;
           readonly RTCPeerConnectionIceErrorEvent: false;
@@ -819,7 +844,7 @@ declare const _default: (
           readonly RTCSessionDescription: false;
           readonly RTCStatsReport: false;
           readonly RTCTrackEvent: false;
-          readonly sampleRate: false;
+          readonly Sanitizer: false;
           readonly scheduler: false;
           readonly Scheduler: false;
           readonly Scheduling: false;
@@ -856,13 +881,25 @@ declare const _default: (
           readonly ShadowRoot: false;
           readonly sharedStorage: false;
           readonly SharedStorage: false;
+          readonly SharedStorageAppendMethod: false;
+          readonly SharedStorageClearMethod: false;
+          readonly SharedStorageDeleteMethod: false;
+          readonly SharedStorageModifierMethod: false;
+          readonly SharedStorageSetMethod: false;
           readonly SharedStorageWorklet: false;
           readonly SharedWorker: false;
           readonly showDirectoryPicker: false;
           readonly showOpenFilePicker: false;
           readonly showSaveFilePicker: false;
+          readonly SnapEvent: false;
           readonly SourceBuffer: false;
           readonly SourceBufferList: false;
+          readonly SpeechGrammar: false;
+          readonly SpeechGrammarList: false;
+          readonly SpeechRecognition: false;
+          readonly SpeechRecognitionErrorEvent: false;
+          readonly SpeechRecognitionEvent: false;
+          readonly SpeechRecognitionPhrase: false;
           readonly speechSynthesis: false;
           readonly SpeechSynthesis: false;
           readonly SpeechSynthesisErrorEvent: false;
@@ -886,7 +923,9 @@ declare const _default: (
           readonly StyleSheet: false;
           readonly StyleSheetList: false;
           readonly SubmitEvent: false;
+          readonly Subscriber: false;
           readonly SubtleCrypto: false;
+          readonly Summarizer: false;
           readonly SVGAElement: false;
           readonly SVGAngle: false;
           readonly SVGAnimatedAngle: false;
@@ -989,6 +1028,7 @@ declare const _default: (
           readonly TaskController: false;
           readonly TaskPriorityChangeEvent: false;
           readonly TaskSignal: false;
+          readonly Temporal: false;
           readonly TEMPORARY: false;
           readonly Text: false;
           readonly TextDecoder: false;
@@ -1005,6 +1045,9 @@ declare const _default: (
           readonly TextTrackList: false;
           readonly TextUpdateEvent: false;
           readonly TimeEvent: false;
+          readonly TimelineTrigger: false;
+          readonly TimelineTriggerRange: false;
+          readonly TimelineTriggerRangeList: false;
           readonly TimeRanges: false;
           readonly ToggleEvent: false;
           readonly toolbar: false;
@@ -1016,6 +1059,7 @@ declare const _default: (
           readonly TransformStream: false;
           readonly TransformStreamDefaultController: false;
           readonly TransitionEvent: false;
+          readonly Translator: false;
           readonly TreeWalker: false;
           readonly TrustedHTML: false;
           readonly TrustedScript: false;
@@ -1047,6 +1091,8 @@ declare const _default: (
           readonly VideoEncoder: false;
           readonly VideoFrame: false;
           readonly VideoPlaybackQuality: false;
+          readonly viewport: false;
+          readonly Viewport: false;
           readonly ViewTimeline: false;
           readonly ViewTransition: false;
           readonly ViewTransitionTypeSet: false;
@@ -1079,24 +1125,27 @@ declare const _default: (
           readonly WebGLTransformFeedback: false;
           readonly WebGLUniformLocation: false;
           readonly WebGLVertexArrayObject: false;
+          readonly WebMCPEvent: false;
           readonly WebSocket: false;
           readonly WebSocketError: false;
           readonly WebSocketStream: false;
           readonly WebTransport: false;
           readonly WebTransportBidirectionalStream: false;
           readonly WebTransportDatagramDuplexStream: false;
+          readonly WebTransportDatagramsWritable: false;
           readonly WebTransportError: false;
           readonly WebTransportReceiveStream: false;
+          readonly WebTransportSendGroup: false;
           readonly WebTransportSendStream: false;
           readonly WGSLLanguageFeatures: false;
           readonly WheelEvent: false;
+          readonly when: false;
           readonly window: false;
           readonly Window: false;
           readonly WindowControlsOverlay: false;
           readonly WindowControlsOverlayGeometryChangeEvent: false;
           readonly Worker: false;
           readonly Worklet: false;
-          readonly WorkletGlobalScope: false;
           readonly WritableStream: false;
           readonly WritableStreamDefaultController: false;
           readonly WritableStreamDefaultWriter: false;
@@ -1112,20 +1161,32 @@ declare const _default: (
           readonly XRAnchorSet: false;
           readonly XRBoundedReferenceSpace: false;
           readonly XRCamera: false;
+          readonly XRCompositionLayer: false;
           readonly XRCPUDepthInformation: false;
+          readonly XRCubeLayer: false;
+          readonly XRCylinderLayer: false;
           readonly XRDepthInformation: false;
           readonly XRDOMOverlayState: false;
+          readonly XREquirectLayer: false;
           readonly XRFrame: false;
+          readonly XRHand: false;
           readonly XRHitTestResult: false;
           readonly XRHitTestSource: false;
           readonly XRInputSource: false;
           readonly XRInputSourceArray: false;
           readonly XRInputSourceEvent: false;
           readonly XRInputSourcesChangeEvent: false;
+          readonly XRJointPose: false;
+          readonly XRJointSpace: false;
           readonly XRLayer: false;
+          readonly XRLayerEvent: false;
           readonly XRLightEstimate: false;
           readonly XRLightProbe: false;
+          readonly XRPlane: false;
+          readonly XRPlaneSet: false;
           readonly XRPose: false;
+          readonly XRProjectionLayer: false;
+          readonly XRQuadLayer: false;
           readonly XRRay: false;
           readonly XRReferenceSpace: false;
           readonly XRReferenceSpaceEvent: false;
@@ -1134,15 +1195,18 @@ declare const _default: (
           readonly XRSession: false;
           readonly XRSessionEvent: false;
           readonly XRSpace: false;
+          readonly XRSubImage: false;
           readonly XRSystem: false;
           readonly XRTransientInputHitTestResult: false;
           readonly XRTransientInputHitTestSource: false;
           readonly XRView: false;
           readonly XRViewerPose: false;
           readonly XRViewport: false;
+          readonly XRVisibilityMaskChangeEvent: false;
           readonly XRWebGLBinding: false;
           readonly XRWebGLDepthInformation: false;
           readonly XRWebGLLayer: false;
+          readonly XRWebGLSubImage: false;
           readonly XSLTProcessor: false;
         };
       };

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "types",
+    "target": "ES2022"
+  },
+  "include": ["eslint.config.js"]
+}

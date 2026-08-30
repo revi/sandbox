@@ -3,7 +3,7 @@ packages:
   - ./npm/eslint-config/
   - ./npm/prettier-config/
 catalog:
-  eslint: 9.39.5
+  eslint: 10.9.1
   prettier: 3.9.6
 # Packages allowed to run install/lifecycle scripts (pnpm 11: replaces onlyBuiltDependencies).
 allowBuilds:

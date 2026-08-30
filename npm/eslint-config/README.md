@@ -23,6 +23,8 @@ limitations under the License.
 
 This is [@revi](https://revi.xyz/)'s personal [eslint](https://eslint.org/docs/latest/use/configure/configuration-files) config.
 
+This version supports ESLint 10 only.
+
 ## Config
 
 ```js
