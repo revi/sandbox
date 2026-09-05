@@ -16,7 +16,7 @@
   },
   "prettier": "@revi/prettier-config",
   "devDependencies": {
-    "@adguard/aglint": "3.0.2",
+    "@adguard/aglint": "3.0.3",
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
     "@types/node": "26.1.2",
