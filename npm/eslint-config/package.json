@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@revi/eslint-config",
-  "version": "0.0.29",
+  "version": "0.1.0",
   "description": "@revi's shared eslint config",
   "keywords": [
     "eslint"
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@eslint/js": "10.0.1",
+    "@eslint/markdown": "8.0.3",
     "eslint": "catalog:",
     "eslint-config-prettier": "10.1.8",
     "globals": "17.11.0"

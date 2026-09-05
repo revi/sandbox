@@ -28,6 +28,7 @@
 // Update README.md when you update the config.
 import globals from 'globals';
 import pluginJs from '@eslint/js';
+import markdown from '@eslint/markdown';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
@@ -38,6 +39,24 @@ export default [
       'no-unused-vars': 'warn',
     },
   },
-  {languageOptions: {globals: globals.browser}},
+  {
+    files: ['**/*.md'],
+    plugins: {
+      markdown,
+    },
+    extends: ['markdown/recommended'],
+    language: 'markdown/gfm',
+    languageOptions: {
+      frontmatter: 'yaml',
+    },
+    rules: {
+      'require-alt-text': 'warn',
+    },
+  },
+  {
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
   eslintConfigPrettier,
 ];

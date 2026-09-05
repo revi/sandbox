@@ -30,6 +30,7 @@ This version supports ESLint 10 only.
 ```js
 import globals from 'globals';
 import pluginJs from '@eslint/js';
+import markdown from '@eslint/markdown';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
@@ -38,6 +39,20 @@ export default [
     rules: {
       'no-undef': 'warn',
       'no-unused-vars': 'warn',
+    },
+  },
+  {
+    files: ['**/*.md'],
+    plugins: {
+      markdown,
+    },
+    extends: ['markdown/recommended'],
+    language: 'markdown/gfm',
+    languageOptions: {
+      frontmatter: 'yaml',
+    },
+    rules: {
+      'require-alt-text': 'warn',
     },
   },
   {languageOptions: {globals: globals.browser}},

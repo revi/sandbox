@@ -28,6 +28,31 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.1.0
+
+Date: 2026-09-05 (KST)
+
+### Added
+
+- `@eslint/markdown` and the rules following it.
+
+```js
+{
+  files: ['**/*.md'],
+  plugins: {
+    markdown,
+  },
+  extends: ['markdown/recommended'],
+  language: 'markdown/gfm',
+  languageOptions: {
+    frontmatter: 'yaml',
+  },
+  rules: {
+    'require-alt-text': 'warn',
+  },
+},
+```
+
 ## v0.0.29
 
 Date: 2026-08-29 (KST)
