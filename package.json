@@ -19,7 +19,7 @@
     "@adguard/aglint": "3.0.2",
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
-    "@types/node": "26.1.2",
+    "@types/node": "26.4.1",
     "csslint": "1.0.5",
     "eslint": "catalog:",
     "eslint-config-wikimedia": "0.32.5",
