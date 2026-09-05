@@ -22,8 +22,8 @@ importers:
         version: 'link:'
     devDependencies:
       '@adguard/aglint':
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 3.0.3
+        version: 3.0.3
       '@revi/eslint-config':
         specifier: ./npm/eslint-config
         version: link:npm/eslint-config
@@ -104,8 +104,8 @@ importers:
 
 packages:
 
-  '@adguard/aglint@3.0.2':
-    resolution: {integrity: sha512-tw5J+NSPnE29Kn1G2XY5vI6j4VK9lRdixE73G8iMKFsFhqn06NhUMfinuiggjeLYkqquZqMqJBGv1aEt4danqQ==}
+  '@adguard/aglint@3.0.3':
+    resolution: {integrity: sha512-t0n8whvYbCaii+RTPfkMg6OlEg5UlTS2iMa0DR+MY+4FH2IiuIDB2GkNpTLqp5pG2hSW/XngB92Oqa5+2eeevQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3469,7 +3469,7 @@ packages:
 
 snapshots:
 
-  '@adguard/aglint@3.0.2':
+  '@adguard/aglint@3.0.3':
     dependencies:
       '@adguard/agtree': 3.3.1
       '@adguard/ecss-tree': 1.1.0
