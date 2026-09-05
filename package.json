@@ -30,7 +30,7 @@
   "optionalDependencies": {
     "renovate": "44.6.0"
   },
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@12.3.0",
   "dependencies": {
     "@revi/scripts": "link:"
   }
