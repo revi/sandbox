@@ -93,13 +93,15 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 		// Well I think my stuff is mostly out of interest for them, tho…
 		$out[] = '# ChatGPT Crawlers are not welcome';
 		$out[] = '# Ref: https://platform.openai.com/docs/plugins/bot';
-		$out[] = 'User-agent: ChatGPT-User';
-		$out[] = 'Disallow: /';
 		$out[] = 'User-agent: GPTBot';
 		$out[] = 'Disallow: /';
 		$out[] = '# Google Gemini AI Crawlers are also not welcome';
 		$out[] = '# Ref: https://issuetracker.revi.xyz/u/googleextended';
 		$out[] = 'User-agent: Google-Extended';
+		$out[] = 'Disallow: /';
+		$out[] = '# Anthropic Crawlers are also not welcome';
+		$out[] = '# Ref: https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler';
+		$out[] = 'User-agent: ClaudeBot';
 		$out[] = 'Disallow: /';
 		$out[] = '# Apple AI stuff';
 		$out[] = '# Ref: https://support.apple.com/en-us/119829#datausage';
@@ -184,6 +186,6 @@ abstract class PhabricatorRobotsController extends PhabricatorController {
 			->setCacheDurationInSeconds(phutil_units('2 hours in seconds'))
 			// ->setClientIDCookie(false) (Doesn't work /shrug)
 			->setCanCDN(true)
-			->setLastModified(1720015620);
+			->setLastModified(1790340617);
 	}
 }
