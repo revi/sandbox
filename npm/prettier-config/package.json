@@ -34,12 +34,12 @@
     "@prettier/plugin-xml": "3.4.2",
     "prettier": "catalog:",
     "prettier-plugin-sh": "0.19.0",
-    "prettier-plugin-toml": "2.0.6"
+    "prettier-plugin-toml": "3.0.2"
   },
   "peerDependencies": {
     "prettier": "3.9.6"
   },
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@12.8.1",
   "publishConfig": {
     "access": "public",
     "provenance": true
