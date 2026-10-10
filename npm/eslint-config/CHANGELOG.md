@@ -28,6 +28,23 @@ Version bump criteria is as follows:
 - minor: When the plugin is added.
 - patch: When the rule is modified (without plugin addition/removal).
 
+## v0.1.1
+
+Date: 2026-10-10 (KST)
+
+### Fix
+
+- Wrap the config in `defineConfig()`. `v0.1.0` used `extends` in a plain
+  config array, so ESLint failed to load the config.
+- Prefix the `require-alt-text` rule as `markdown/require-alt-text`.
+- Stop applying JavaScript rules and browser globals to Markdown files.
+- Regenerate the bundled type declarations, and point `types` in
+  `package.json` at them; it named a nonexistent `types/index.d.ts`.
+
+### Update
+
+- Update `eslint` to `v10.12.0`.
+
 ## v0.1.0
 
 Date: 2026-09-05 (KST)

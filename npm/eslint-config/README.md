@@ -28,14 +28,17 @@ This version supports ESLint 10 only.
 ## Config
 
 ```js
+import {defineConfig} from 'eslint/config';
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import markdown from '@eslint/markdown';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
-export default [
-  pluginJs.configs.recommended,
+export default defineConfig([
   {
+    ignores: ['**/*.md'],
+    extends: [pluginJs.configs.recommended],
+    languageOptions: {globals: globals.browser},
     rules: {
       'no-undef': 'warn',
       'no-unused-vars': 'warn',
@@ -52,10 +55,9 @@ export default [
       frontmatter: 'yaml',
     },
     rules: {
-      'require-alt-text': 'warn',
+      'markdown/require-alt-text': 'warn',
     },
   },
-  {languageOptions: {globals: globals.browser}},
   eslintConfigPrettier,
-];
+]);
 ```

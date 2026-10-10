@@ -26,14 +26,20 @@
  */
 
 // Update README.md when you update the config.
+import {defineConfig} from 'eslint/config';
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import markdown from '@eslint/markdown';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
-export default [
-  pluginJs.configs.recommended,
+export default defineConfig([
   {
+    // JavaScript rules cannot run on files parsed by other languages.
+    ignores: ['**/*.md'],
+    extends: [pluginJs.configs.recommended],
+    languageOptions: {
+      globals: globals.browser,
+    },
     rules: {
       'no-undef': 'warn',
       'no-unused-vars': 'warn',
@@ -50,13 +56,8 @@ export default [
       frontmatter: 'yaml',
     },
     rules: {
-      'require-alt-text': 'warn',
-    },
-  },
-  {
-    languageOptions: {
-      globals: globals.browser,
+      'markdown/require-alt-text': 'warn',
     },
   },
   eslintConfigPrettier,
-];
+]);
