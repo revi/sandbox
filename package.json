@@ -16,13 +16,13 @@
   },
   "prettier": "@revi/prettier-config",
   "devDependencies": {
-    "@adguard/aglint": "3.0.2",
+    "@adguard/aglint": "3.0.3",
     "@revi/eslint-config": "./npm/eslint-config",
     "@revi/prettier-config": "./npm/prettier-config",
     "@types/node": "26.1.2",
     "csslint": "1.0.5",
     "eslint": "catalog:",
-    "eslint-config-wikimedia": "0.32.5",
+    "eslint-config-wikimedia": "0.32.6",
     "jshint": "2.13.6",
     "prettier": "catalog:",
     "typescript": "7.0.2"
